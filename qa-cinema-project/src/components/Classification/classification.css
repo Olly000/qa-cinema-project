@@ -1,3 +1,15 @@
 .rating-icon {
     height: 3em;
 }
+
+figure {
+    display: flex;
+}
+
+figcaption {
+    justify-content: center;
+    text-align: center;
+    align-self: baseline;
+    align-items: baseline;
+    font-family: 'Lato', sans-serif;
+}
