@@ -4,10 +4,10 @@ import ClassText from "./ClassText.jsx";
 const Classification = () => {
 
 
-    return(
+    return (
         <>
-            <ClassText />
-            <Links />
+            <ClassText/>
+            <Links/>
         </>
     )
 }
