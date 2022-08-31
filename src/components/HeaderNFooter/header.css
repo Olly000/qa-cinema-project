@@ -1,0 +1,66 @@
+.header {
+    font-family: sans-serif;
+    background: #2c3e50;
+}
+
+.header--navbar {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 25px auto 0;
+    width: 90%;
+    height: 25px;
+    background: #34495e;
+    border-radius: 8px;
+    font-size: 0;
+    box-shadow: 0 10px 3px 0 rgba(0, 0, 0, .1);
+    
+}
+
+.header--navbar a {
+    font-size: 15px;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    line-height: 25px;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.header--navbar .animation {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    background: #1abc9c;
+    border-radius: 8px;
+    transition: all .5s ease 0s;
+}
+
+.header--navbar a:nth-child(1){
+    width: 33%;
+}
+
+.header--navbar .start-home, a:nth-child(1):hover~.animation {
+    width:33%;
+    left: 0;
+}
+
+.header--navbar a:nth-child(2) {
+    width: 33%;
+}
+
+.header--navbar .start-home, a:nth-child(2):hover~.animation {
+    width: 33%;
+    left: 10px;
+}
+
+.header--navbar a:nth-child(3) {
+    width: 33%;
+}
+
+.header--navbar .start-home, a:nth-child(3):hover~.animation {
+    width: 33%;
+    left: 20px;
+}
