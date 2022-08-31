@@ -1,3 +1,24 @@
 #cinePic {
+    align-self: center;
     width: 30%;
+}
+
+.transport-icon {
+    height: 2em;
+}
+
+figure {
+    display: flex;
+}
+
+figcaption {
+    justify-content: center;
+    text-align: center;
+    align-self: baseline;
+    align-items: baseline;
+    font-family: 'Lato', sans-serif;
+}
+
+#address {
+    height: 25em;
 }

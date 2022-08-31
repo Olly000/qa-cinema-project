@@ -15,7 +15,6 @@ const Map = () => {
 
     const pushPins = [pushPin];
 
-
     return (
         <BingMapsReact
             bingMapsKey='Ah_VEsrpAML8op6IOZ0g3b8d-czZ7uDps3SAcAXYver7MCvmUj60LMX9kmxH-kd3'
@@ -26,7 +25,6 @@ const Map = () => {
                 center: {latitude: 51.504860, longitude: -0.068170},
                 zoom: 14
             }}
-
         />
     );
 }
