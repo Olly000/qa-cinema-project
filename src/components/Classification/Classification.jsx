@@ -5,10 +5,13 @@ const Classification = () => {
 
 
     return (
-        <>
-            <ClassText/>
-            <Links/>
-        </>
+        <div className="placesToGo">
+            <div className="container">
+                <h2>Age Classifications</h2>
+                <ClassText />
+                <Links />
+            </div>
+        </div>
     )
 }
 

@@ -1,14 +1,14 @@
-import "./footer.css";
-
+//import "./footer.css";
+import { Link } from 'react-router-dom';
 
 function Footer() {
     return (
-        <div className="footer--basic">
+        <div className="footer">
             <footer>
-                <ul className="inline--list">
-                    <li className="list-inline-item">About Us</li>
-                    <li className="list-inline-item">Contact Page</li>
-                    <li className="list-inline-item">Age Classification</li>
+                <ul className="footerList">
+                    <Link to="/" className="navLink">About Us</Link>
+                    <Link to="/" className="navLink">Contact Page</Link>
+                    <Link to="/classification" className="navLink">Age Classification</Link>
                 </ul>
                 <p className="copyright">MnM LTD © 2022</p>
             </footer>
