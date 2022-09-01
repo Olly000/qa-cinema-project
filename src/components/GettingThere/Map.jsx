@@ -3,7 +3,7 @@ import BingMapsReact from 'bingmaps-react';
 
 const Map = () => {
 
-    const [bingMapReady, setBingMapReady] = useState(false) // added a new state to use in bingmapsreact
+    const [rand, setRand] = useState(0);
 
     const pushPin = {
         center: {
@@ -17,23 +17,21 @@ const Map = () => {
 
     const pushPins = [pushPin];
 
+    //
+    console.log(rand);
 
     return (
-        <BingMapsReact
-            pushPins={bingMapReady ? pushPins : null}
-            onMapReady={function () {
-                setBingMapReady(true)
-            }}
-            bingMapsKey={process.env.REACT_APP_MAP_API_KEY}
-            height="20em"
-            width="20em"
-
-
-            viewOptions={{
-                center: {latitude: 51.504860, longitude: -0.068170},
-                zoom: 14
-            }}
-        />
+            <BingMapsReact
+                onMapReady={console.log('map loaded')}
+                bingMapsKey={process.env.REACT_APP_MAP_API_KEY}
+                height="20em"
+                width="20em"
+                pushPins={pushPins}
+                viewOptions={{
+                    center: {latitude: 51.504860, longitude: -0.068170},
+                    zoom: 14
+                }}
+            />
     );
 }
 
