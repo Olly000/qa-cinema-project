@@ -5,14 +5,14 @@ import Rating12 from "./Rating12";
 import Rating15 from "./Rating15";
 import Rating18 from "./Rating18";
 
-import './classification.css';
+//import './classification.css';
 
 
 const ClassText = () => {
 
 
     return (
-        <section>
+        <section className="venuesContainer">
             <p> There are six main film classifications for films rated in the Uk. These ratings are carried out by the
                 British Board of Film Classification (B.B.F.C.) and are defined below, click the icon for further
                 details
