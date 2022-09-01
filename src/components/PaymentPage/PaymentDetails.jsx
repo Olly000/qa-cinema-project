@@ -7,10 +7,12 @@ const PaymentDetails = () => {
     const [cardName, setCardName] = useState('');
     const [expiry, setExpiry] = useState('');
     const [cvc, setCvc] = useState('');
-
     const [isChecked, setIsChecked] = useState(false);
 
+    //const expPattern = /\d\d\/\d\d/
+
     const handleSubmit = (event) => {
+        console.log(event);
         if(!isChecked) {
             event.preventDefault();
         } else {
@@ -32,7 +34,7 @@ const PaymentDetails = () => {
             <br/>
             <input type="text" placeholder="card number" onChange={e =>setCardNum(e.target.value)} minLength={16} maxLength={16}  required/>
             <br/>
-            <input type="text" placeholder="expiry date" onChange={e =>setExpiry(e.target.value)}  required/>
+            <input type="text" placeholder="expiry date" onChange={e =>setExpiry(e.target.value)} pattern="/\d\d\/\d\d/"  required/>
             <br/>
             <input type="password" placeholder="CVC" onChange={e =>setCvc(e.target.value)} minLength={3} maxLength={3} required/>
             <br/>
