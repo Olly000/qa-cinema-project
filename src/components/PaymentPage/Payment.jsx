@@ -1,13 +1,12 @@
 import PaymentDetails from "./PaymentDetails.jsx";
 import PaymentInfo from "./PaymentInfo.jsx";
-import {useState} from "react";
 
 
-
-const Payment = () => {
+const Payment = (film, showing, adults, children, concessions) => {
 
     return (<>
-            <PaymentInfo/>
+            <h2> Make a payment</h2>
+            <PaymentInfo film={film} showing={showing} adults={adults} children={children} concessions={concessions}/>
             <PaymentDetails/>
         </>
     )
