@@ -1,6 +1,5 @@
-#cinePic {
-    align-self: center;
-    width: 30%;
+.map-box {
+    height: 20em;
 }
 
 .transport-icon {
@@ -17,6 +16,11 @@ figcaption {
     align-self: baseline;
     align-items: baseline;
     font-family: 'Lato', sans-serif;
+}
+
+#cinePic {
+    align-self: center;
+    width: 30%;
 }
 
 #address {

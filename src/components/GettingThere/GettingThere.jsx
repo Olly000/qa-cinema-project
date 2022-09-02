@@ -4,8 +4,7 @@ import busStop from './Buses_roundel.png';
 import parking from './parking-icon.png';
 
 import './GettingThere.css';
-import Map from "./Map.jsx";
-import Map2 from "./MapNoReact";
+import MapBuilder from "./MapBuilder";
 
 
 const GettingThere = () => {
@@ -17,7 +16,7 @@ const GettingThere = () => {
                 <p> The address of the cinema is: International House, 1 St Katharine's Way, London E1W 1UN</p>
                 <p> Find us on what3words with <a href="https://what3words.com/free.speaks.butter" target="_blank"
                                                   rel="noreferrer">free.speaks.butter</a></p>
-                <Map2/>
+                <div><MapBuilder/></div>
             </div>
             <div id="public-transport">
                 <figure className="transport-figure">
