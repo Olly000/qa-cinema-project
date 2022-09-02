@@ -3,12 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import CommentForm from './components/Discussion/CommentForm';
+import HomePage from './components/Homepage/HomePage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-        <App/>
+        <CommentForm />
     </React.StrictMode>
 );
 
