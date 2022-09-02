@@ -1,0 +1,28 @@
+.map-box {
+    height: 20em;
+}
+
+.transport-icon {
+    height: 2em;
+}
+
+figure {
+    display: flex;
+}
+
+figcaption {
+    justify-content: center;
+    text-align: center;
+    align-self: baseline;
+    align-items: baseline;
+    font-family: 'Lato', sans-serif;
+}
+
+#cinePic {
+    align-self: center;
+    width: 30%;
+}
+
+#address {
+    height: 25em;
+}
