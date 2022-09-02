@@ -1,24 +1,25 @@
-import "./header.css";
+//import "./header.css";
+import { NavLink } from 'react-router-dom';
 
 function Header() {
     return (
         <header className="header">
+            <div className="banner">
+                <h1>QA CINEMA</h1>
+                <div className="searchContainer">
+                    <input id="search" type="text" placeholder="Search for films..."></input>
+                </div>
+            </div>
             <nav className="header--navbar">
-                <ul className="Gallery--Listings">
-                    <li><a href='#'>Current Releases</a></li>
-                    <li><a href='#'>Future Releases</a></li>
-                    <li><a href='#'>Movie search</a></li>
+                <ul className="navbar-nav">
+                    <li><NavLink to='/' className="navLink">Home</NavLink></li>
+                    <li><NavLink to='/fdgd' className="navLink">Listings</NavLink></li>
+                    <li><NavLink to='/gdf' className="navLink">Open Times</NavLink></li>
+                    <li><NavLink to='/dgfd' className="navLink">Screen Showings</NavLink></li>
+                    <li><NavLink to='/screens' className="navLink">Our Screens</NavLink></li>
+                    <li><NavLink to='/fgdf' className="navLink">Getting There</NavLink></li>
+                    <li><NavLink to='/placesToGo' className="navLink">Places To Go</NavLink></li>
                 </ul>
-                <ul className="Opening--Times">
-                    <li><a href='#'>Open Times</a></li>
-                    <li><a href='#'>Screen Showings</a></li>
-                    <li><a href='#'>Our Screens</a></li>
-                </ul>
-                <ul className="Location">
-                    <li><a href='#'>Getting There</a></li>
-                    <li><a href='#'>Places To Go</a></li>
-                </ul>
-                <div className="animation start-home"></div>
             </nav>
         </header>
     );

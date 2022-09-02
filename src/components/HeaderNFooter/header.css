@@ -1,6 +1,7 @@
 .header {
     font-family: sans-serif;
     background: #2c3e50;
+    height: 20vh;
 }
 
 .header--navbar {
