@@ -7,6 +7,7 @@ import PlacesToGo from './components/Places-To-Go/PlacesTogo';
 import Screens from './components/Screens/Screens';
 import { Link, Routes, Route } from 'react-router-dom';
 import Home from './components/Home/Home';
+import ListingsGallery from './components/ListingsGallery/ListingsGallery';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/classification" element={<Classification />} />
         <Route path="/placesToGo" element={<PlacesToGo />} />
         <Route path="/screens" element={<Screens />} />
+        <Route path="/listings" element={ <ListingsGallery /> } />
       </Routes>
       <Footer />
     </>
