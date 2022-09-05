@@ -1,0 +1,9 @@
+.confirm--header {
+    background-color: #1f42a1;
+    width: 100em;
+    padding: 1em;
+}
+
+.confirm--footer {
+    color: white
+}
