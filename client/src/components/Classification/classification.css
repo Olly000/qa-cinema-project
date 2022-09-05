@@ -1,38 +1,9 @@
-.rating-icon {
-    height: 3em;
-}
-
-figure {
+.classFigure {
     display: flex;
-}
-
-figcaption {
-    justify-content: center;
-    text-align: center;
-    align-self: baseline;
-    align-items: baseline;
-    font-family: 'Lato', sans-serif;
-}
-
-.modal {
-    font-size: 12px;
-    background-color: black;
-    color: aliceblue;
-
-}
-
-.modal > .header {
-    width: 100%;
-    font-size: 12px;
-    text-align: center;
-    padding: 5px;
-    background-color: black;
-    color: aliceblue;
-}
-
-.content {
-    width: 50%;
-    padding: 10px 5px;
-    background-color: black;
-    color: aliceblue;
-}
+    justify-content: flex-end;
+    align-items: center;
+  }
+  figcaption {
+    width: 70%;
+  }
+  

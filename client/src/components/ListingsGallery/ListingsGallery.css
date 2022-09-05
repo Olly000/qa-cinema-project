@@ -18,9 +18,9 @@
   .movie {
     width: 30vw;
     height: 15vw;
-    background-color: rgba(0, 0, 0, 0.429);
+    background-color: rgba(0, 0, 0, 0.756);
     border-radius: 10px;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
     overflow: hidden;
     position: relative;
     display: flex;
