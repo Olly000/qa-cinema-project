@@ -1,7 +1,7 @@
-const FilmInput = ({data}, {name}) => {
+const FilmInput = ({onChange, data, name}) => {
 
     return(
-        <select id={name} name={name} className="in-fields" required>
+        <select id={name} name={name} onChange={onChange} className="in-fields" required>
         {data.map((option, index) => (
                 <option key={index} value={option}>
                     {option}

@@ -1,7 +1,7 @@
 import './payments.css';
 import {useState} from "react";
 
-const PaymentDetails = (total) => {
+const PaymentDetails = ({total}) => {
 
     const [cardNum, setCardNum] = useState('');
     const [cardName, setCardName] = useState('');

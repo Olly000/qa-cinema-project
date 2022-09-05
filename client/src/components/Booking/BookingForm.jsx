@@ -58,10 +58,9 @@ const BookingForm = () => {
     const handleSubmit = () => {
         fetch(`/updateTicketsLeft/:${ticketNumber}`)  // TODO: pass state without this fucking up
             .then((response) => console.log(response.status));
-        sessionStorage.setItem('data', JSON.stringify({'film' :film, 'showing': showing, 'adults': adults, 'children': children,
-            'concession': concession, 'total': total, 'ticketNumber' : ticketNumber}));
-        navigate('/payment');
 
+        navigate('/payment', {state: {film: film, showing: showing, adults: adults,
+                children: children, concession: concession, total: total, ticketNumber: ticketNumber}});
     }
 
     return (
@@ -70,8 +69,9 @@ const BookingForm = () => {
                 <legend> Tickets</legend>
                 <label> Choose Film</label>
                 <FilmInput data={tempFilmList} name="film" onChange={input => setFilm(input.target.value)}/>
+
                 <label> Choose Showing</label>
-                <FilmInput data={tempShowingList} name="showing" onChange={input => setShowing(input.target.value)}/>
+                <FilmInput data={tempShowingList} name="showing" onChange={input => setShowing(input.target.text)}/>
                 <label htmlFor="ad-tix">Number of Adult Tickets: </label><input type="text" className="in-fields"
                                                                                 name="ad-tix" size="2"
                                                                                 placeholder="0"

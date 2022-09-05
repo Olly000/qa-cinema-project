@@ -1,13 +1,11 @@
 import {useNavigate} from "react-router";
 
-const CancelOrderButton = () => {
+const CancelOrderButton = (ticketNumber) => {
 
     const navigation = useNavigate();
 
-    const tickets = JSON.parse(sessionStorage.getItem('data')).ticketNumber;
-    console.log(tickets);
     const handleClick = () => {
-        fetch(`/updateTicketsLeft/:${-tickets}`)  // TODO: pass state without this fucking up
+        fetch(`/updateTicketsLeft/:${-ticketNumber}`)
             .then((response) => console.log(response.status));
         navigation(-1);
     }
