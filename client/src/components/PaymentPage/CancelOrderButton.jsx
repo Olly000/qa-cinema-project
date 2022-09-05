@@ -11,7 +11,7 @@ const CancelOrderButton = (ticketNumber) => {
     }
 
     return(
-        <button onClick={handleClick}>Cancel Order </button>
+        <button onClick={handleClick} >Cancel Order </button>
     )
 }
 

@@ -75,10 +75,10 @@ const BookingForm = () => {
             <fieldset className="booking-form">
                 <legend> Tickets</legend>
                 <label> Choose Film</label>
-                <FilmInput data={tempFilmList} name="film" disabled={false} onChange={input => selectFilm(input.target.value)}/>
+                <FilmInput data={tempFilmList} name="film" disabled={false} onChange={input => selectFilm(input.target.value)} />
 
                 <label> Choose Showing</label>
-                <ShowingInput data={tempShowingList} name="showing" disabled={disableShowing} onChange={input => setShowing(input.target.value)}/>
+                <ShowingInput data={tempShowingList} name="showing" disabled={disableShowing} onChange={input => setShowing(input.target.value)} />
 
                 <label htmlFor="ad-tix">Number of Adult Tickets: </label><input type="text" className="in-fields"
                                                                                 name="ad-tix" size="2"

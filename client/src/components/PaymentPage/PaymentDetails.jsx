@@ -1,6 +1,7 @@
 import './payments.css';
 import {useState} from "react";
 
+
 const PaymentDetails = ({total}) => {
 
     const [cardNum, setCardNum] = useState('');
@@ -9,7 +10,6 @@ const PaymentDetails = ({total}) => {
     const [cvc, setCvc] = useState('');
     const [isChecked, setIsChecked] = useState(false);
 
-    //const expPattern = /\d\d\/\d\d/
 
     const savePaymentDetails = () => {
         //TODO: send user info to the db
@@ -35,6 +35,8 @@ const PaymentDetails = ({total}) => {
     }
 
     return(
+        <>
+
         <fieldset id="payment-fields" className="payment-container"><legend className="pay-text">
             Please enter your payment details below</legend>
             <br/>
@@ -52,6 +54,7 @@ const PaymentDetails = ({total}) => {
             <button onClick={handleSubmit}>Submit details</button>
             <br/>
         </fieldset>
+            </>
     )
 }
 
