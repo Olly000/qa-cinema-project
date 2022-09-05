@@ -1,5 +1,6 @@
-const PaymentInfo = (film, showing, adults, children, concessions) => {
+const PaymentInfo = (film, showing, adults, children, concessions, total) => {
 
+    // this is just a temporary variable to test the code of this section before booking page completed
     const temp = {
         adult: 2,
         child: 1,
@@ -11,11 +12,11 @@ const PaymentInfo = (film, showing, adults, children, concessions) => {
 
     return (
         <div className="payment-container">
-            <p className="pay-text"> You are about to buy {temp.adult} adult ticket(s), {temp.child} child ticket(s)
-                and {temp.concession} concession ticket(s)
-                for the showing of {temp.film} on {temp.showing}</p>
+            <p className="pay-text"> You are about to buy {adults} adult ticket(s), {children} child ticket(s)
+                and {concessions} concession ticket(s)
+                for the showing of {film} on {showing}</p>
             <br/>
-            <p className="pay-text">Total Price is: £{temp.cost}</p>
+            <p className="pay-text">Total Price is: £{total}</p>
         </div>
     )
 }
