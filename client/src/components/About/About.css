@@ -1,0 +1,24 @@
+.container-fluid {
+    display: flex;
+    justify-content: center;
+}
+
+.id--number {
+    margin: 10px 5px 5px 10px;
+}
+
+.first--name {
+    margin: 10px 5px 5px 10px;
+}
+
+.last--name {
+    margin: 10px 5px 5px 10px;
+}
+
+.email {
+    margin: 10px 5px 5px 10px;
+}
+
+.git--link {
+    margin: 10px 5px 5px 10px;
+}
