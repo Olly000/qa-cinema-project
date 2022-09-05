@@ -3,6 +3,7 @@ import {useState} from "react";
 
 import './booking.css';
 import {useNavigate} from 'react-router';
+import ShowingInput from "./ShowingInput";
 
 const BookingForm = () => {
 
@@ -12,6 +13,7 @@ const BookingForm = () => {
     const [adults, setAdults] = useState(0);
     const [children, setChildren] = useState(0);
     const [concession, setConcession] = useState(0);
+    const [disableShowing, setDisableShowing] = useState(true);
 
     const navigate = useNavigate()
 
@@ -30,6 +32,11 @@ const BookingForm = () => {
     const total = ((adults * prices.adult) + (children * prices.child) + (concession * prices.concession));
 
     let ticketNumber = adults + children + concession;
+
+    const selectFilm = (input) => {
+        setFilm(input);
+        setDisableShowing(false);
+    }
 
     const checkAvailable = () => {
         fetch("./api/checkSeats") // TODO: check the endpoint matches this
@@ -68,10 +75,11 @@ const BookingForm = () => {
             <fieldset className="booking-form">
                 <legend> Tickets</legend>
                 <label> Choose Film</label>
-                <FilmInput data={tempFilmList} name="film" onChange={input => setFilm(input.target.value)}/>
+                <FilmInput data={tempFilmList} name="film" disabled={false} onChange={input => selectFilm(input.target.value)}/>
 
                 <label> Choose Showing</label>
-                <FilmInput data={tempShowingList} name="showing" onChange={input => setShowing(input.target.text)}/>
+                <ShowingInput data={tempShowingList} name="showing" disabled={disableShowing} onChange={input => setShowing(input.target.value)}/>
+
                 <label htmlFor="ad-tix">Number of Adult Tickets: </label><input type="text" className="in-fields"
                                                                                 name="ad-tix" size="2"
                                                                                 placeholder="0"
