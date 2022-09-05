@@ -1,7 +1,17 @@
 import './payments.css';
 import {useState} from "react";
+import { Link } from 'react-router-dom'
+import axios from 'axios'
 
-const PaymentDetails = () => {
+const PaymentDetails = (children,adults,concession,film,showing) => {
+
+    let body = {
+        "children": children,
+        "adults": adults,
+        "concession": concession,
+        "film": film,
+        "showing": showing
+    }
 
     const [cardNum, setCardNum] = useState('');
     const [cardName, setCardName] = useState('');
@@ -17,12 +27,24 @@ const PaymentDetails = () => {
             event.preventDefault();
         } else {
             //TODO: send user info to the db
+
+            body += {"cardName": cardName};
+            axios.post('http://locahost:27017/payment', {
+                body}).then(res => res.json()).then(data => console.log(data));
         }
         //TODO: send state info to an external payment processor
+
+        let cardData = {
+            'cardNumber': cardNum,
+            'accountHolderName': cardName,
+            'cardExpiryData': expiry,
+            'CVC': cvc
+        }
     }
 
     const handleCheck = () => {
         setIsChecked(!isChecked);
+        
 
     }
 
@@ -41,7 +63,7 @@ const PaymentDetails = () => {
             <span className="pay-text"><input type="checkbox" onChange={handleCheck}/>
             Click here to save your details for next time</span>
             <br/>
-            <button onClick={handleSubmit}>Submit details</button>
+            <button onClick={handleSubmit}><Link to="/payment/confirm">Submit details</Link></button>
             <br/>
         </fieldset>
     )

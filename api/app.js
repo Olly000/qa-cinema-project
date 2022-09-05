@@ -58,42 +58,4 @@ mongoose.connect('mongodb://127.0.0.1:27017/cinema_db', { useNewUrlParser: true 
 const movieSchema = require('./schemas/movieSchema.js');
 const Movie = mongoose.model('movies', movieSchema);
 
-
-const samaritan = new Movie({
-  title: 'Samaritan',
-  actors: ["Sylvester Stallone", " Javon Walton", " Pilou Asbæk", " Dascha Polanco"],
-  director: "Julius Avery",
-  showings: [{ screen: "1", time: new Date() }, { screen: "duluxe", time: new Date() }],
-  image: `img/samaritan.jpg`
-});
-//samaritan.save().then(() => console.log('Samaritan saved')).catch(err => console.log(err));
-
-const ttyol = new Movie({
-  title: 'Three Thousand Years of Longing',
-  actors: ["Idris Elba", " Tilda Swinton", " Aamito Lagum", " Nicolas Mouawad"],
-  director: "George Miller",
-  showings: [{ screen: "1", time: new Date() }, { screen: "duluxe", time: new Date() }],
-  image: `img/three thousand years of longing.jpg`
-});
-//ttyol.save().then(() => console.log('Three Thousand Years of Longing saved')).catch(err => console.log(err));
-
-const theInvitation = new Movie({
-  title: 'The Invitation',
-  actors: ["Nathalie Emmanuel", " Thomas Doherty", " Stephanie Corneliussen", " Alana Boden"],
-  director: "Jessica M. Thompson",
-  showings: [{ screen: "1", time: new Date() }, { screen: "duluxe", time: new Date() }],
-  image: `img/the invitation.jpg`
-});
-//theInvitation.save().then(() => console.log('The Invitation saved')).catch(err => console.log(err));
-
-const nope = new Movie({
-  title: 'Nope',
-  actors: ["Daniel Kaluuya", "Keke Palmer", "Steven Yeun", "Michael Wincott"],
-  director: "Jordan Peele",
-  showings: [{ screen: "1", time: new Date() }, { screen: "duluxe", time: new Date() }],
-  image: "img/nope.jpg"
-}); 
-
-//nope.save().then(() => console.log('nope saved')).catch(err => console.log(err));
-
 module.exports = app;

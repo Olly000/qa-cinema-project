@@ -1,0 +1,23 @@
+[
+    {
+        "title": "Samaritan",
+        "actors": ["Sylvester Stallone", " Javon Walton", " Pilou Asbæk", " Dascha Polanco"],
+        "director": "Julius Avery",
+        "image": "img/samaritan.jpg"
+    },{
+        "title":"Three Thousand Years of Longing",
+        "actors": ["Idris Elba", " Tilda Swinton", " Aamito Lagum", " Nicolas Mouawad"],
+        "director": "George Miller",
+        "image": "img/three_thousand_years_of_longing.jpg"
+    },{
+        "title": "The invitation",
+        "actors":  ["Nathalie Emmanuel", " Thomas Doherty", " Stephanie Corneliussen", " Alana Boden"],
+        "director": "Jessica M. Thompson",
+        "image": "img/the_invitation.jpg"
+    },{
+        "title": "Nope",
+        "actors": ["Daniel Kaluuya", "Keke Palmer", "Steven Yeun", "Michael Wincott"],
+        "director": "Jordan Peele",
+        "image": "img/nope.jpg"
+    }
+]
