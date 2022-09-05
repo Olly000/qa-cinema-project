@@ -4,8 +4,10 @@ const CancelOrderButton = () => {
 
     const navigation = useNavigate();
 
+    const tickets = JSON.parse(sessionStorage.getItem('data')).ticketNumber;
+    console.log(tickets);
     const handleClick = () => {
-        fetch(`/updateTicketsLeft/:${-ticketNumber}`)  // TODO: pass state without this fucking up
+        fetch(`/updateTicketsLeft/:${-tickets}`)  // TODO: pass state without this fucking up
             .then((response) => console.log(response.status));
         navigation(-1);
     }

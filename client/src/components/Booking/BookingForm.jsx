@@ -45,9 +45,6 @@ const BookingForm = () => {
             .catch(error => console.log(error));
     }
 
-
-
-
     const RetrieveFilms = () => {
         // TODO: retrieve the list of films that are currently showing from the db
         return [];
@@ -61,18 +58,9 @@ const BookingForm = () => {
     const handleSubmit = () => {
         fetch(`/updateTicketsLeft/:${ticketNumber}`)  // TODO: pass state without this fucking up
             .then((response) => console.log(response.status));
-        navigate('/payment'
-        //     {state:
-        //         {
-        //             film,
-        //             showing,
-        //             adults,
-        //             children,
-        //             concession,
-        //             total
-        //         }
-        // }
-        );
+        sessionStorage.setItem('data', JSON.stringify({'film' :film, 'showing': showing, 'adults': adults, 'children': children,
+            'concession': concession, 'total': total, 'ticketNumber' : ticketNumber}));
+        navigate('/payment');
 
     }
 
