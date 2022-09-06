@@ -8,11 +8,9 @@ const cors = require('cors');
 
 const indexRouter = require('./routes/index');
 const moviesRouter = require('./routes/movies');
+const discussionRouter = require('./routes/dicussion/DiscussionBoardApi');
 const testAPIRouter = require("./routes/testAPI");
 const app = express();
-
-
-
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -28,6 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/movies', moviesRouter);
 app.use("/testAPI", testAPIRouter);
+app.use('/discussionBoardApi', discussionRouter);
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
@@ -57,5 +56,8 @@ mongoose.connect('mongodb://127.0.0.1:27017/cinema_db', { useNewUrlParser: true 
 
 const movieSchema = require('./schemas/movieSchema.js');
 const Movie = mongoose.model('movies', movieSchema);
+
+const discussionSchema = require('./schemas/discussionSchema.js');
+const discussion = require ('discussion', discussionSchema);
 
 module.exports = app;
