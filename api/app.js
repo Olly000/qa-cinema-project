@@ -8,7 +8,7 @@ const cors = require('cors');
 
 const indexRouter = require('./routes/index');
 const moviesRouter = require('./routes/movies');
-const discussionRouter = require('./routes/dicussion/DiscussionBoardApi');
+const discussionRouter = require('./routes/dicussion/DiscussionBoardApi.js');
 const testAPIRouter = require("./routes/testAPI");
 const app = express();
 
@@ -27,6 +27,7 @@ app.use('/', indexRouter);
 app.use('/movies', moviesRouter);
 app.use("/testAPI", testAPIRouter);
 app.use('/discussionBoardApi', discussionRouter);
+
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
@@ -51,13 +52,5 @@ mongoose.connect('mongodb://127.0.0.1:27017/cinema_db', { useNewUrlParser: true 
   console.log("connection ready");
 }, (err) => { console.log("THIS IS THE ERROR I AM PRINTING: " + err) });
 
-
-
-
-const movieSchema = require('./schemas/movieSchema.js');
-const Movie = mongoose.model('movies', movieSchema);
-
-const discussionSchema = require('./schemas/discussionSchema.js');
-const discussion = require ('discussion', discussionSchema);
 
 module.exports = app;
