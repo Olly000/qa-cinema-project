@@ -9,58 +9,6 @@
 }
 body {
   background-color: #4c4c4c;
-
-}
-
-Header {
-  height: 35vh;
-}
-
-.header {
-  width: 100%;
-  height: 35vh;
-  background-image: url("https://www.productionbase.co.uk/blog/wp-content/uploads/Film.jpg");
-  background-size: cover;
-  background-position: 50%;
-}
-
-h1 {
-  color: white;
-  font-size: 10vmin;
-}
-.banner {
-  height: 25vh;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-
-}
-
-.header--navbar {
-width: 100%;
-position: sticky;
- top: 0;
-display: flex;
-flex-direction: row;
-justify-content: space-around;
-background-color: #132863;
-height: 10vh;
-align-self: flex-start;
-}
-.navbar-nav {
-  width: 100%;
-
-  display: flex;
-  list-style: none;
-  justify-content: space-around;
-}
-.navbar-nav > li {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 20vw;
-  border-radius: 10px 10px 0px 0px;
 }
 
 .navLink {
@@ -78,19 +26,10 @@ align-self: flex-start;
   background-color: #1f42a1;
 }
 
-.searchContainer {
-  width: 25vw;
-}
 
-#search {
-  padding: 5%;
-  margin: 5%;
-  border-radius: 10px;
-  width: 20vw;
-  box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.447), inset -3px -3px 3px rgba(0, 0, 0, 0.447);
-}
 
-.venuesContainer {
+.columnGapContainer {
+  padding: 50px 0px;
   display: flex;
   flex-direction: column;
   row-gap: 50px;
@@ -113,23 +52,29 @@ img {
   overflow: hidden;
 }
 
+input {
+  border-radius: 10px;
+}
+
 .description-container {
   width: 40%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.518);
 }
 
 .description-container > p {
   width: 70%;
 }
 
-.placesToGo {
+.centeredContent {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
 }
 
 .container {
@@ -138,19 +83,10 @@ img {
   flex-direction: column;
   justify-content: space-around;
   row-gap: 25px;
-  padding: 10% 0px;
   text-align: center;
+  color: white;
+  min-height: 100vh;
 }
-
-.classFigure {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-figcaption {
-  width: 70%;
-}
-
 
 h2 {
   color: gold;
@@ -158,22 +94,3 @@ h2 {
 }
 
 
-
-
-.footer {
-  display: flex;
-  background-color: #132863;
-}
-
-footer {
-  width: 100%;
-}
-
-footer > p {
-  color: white;
-}
-
-.footerList {
-  display: flex;
-  justify-content: space-around;
-}
