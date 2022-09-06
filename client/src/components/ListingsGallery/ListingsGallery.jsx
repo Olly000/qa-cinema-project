@@ -2,18 +2,17 @@ import React, { useEffect, useState } from "react";
 import Movie from './sub-components/Movie';
 import styles from './ListingsGallery.css';
 import ListingsNav from "./sub-components/ListingsNav";
+import SearchBar from "../HeaderNFooter/sub-components/SearchBar.jsx";
 
 const ListingsGallery = () => {
     const [movies, setMovies] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
     const [apiResponse, setApiResponse] = useState('Hello');
 
-    /*   useEffect(() => {
-           fetch("http://localhost:9000/testAPI", { method: 'get' })
-               .then(res => res.text())
-               .then(res => setApiResponse(res))
-               .catch(err => console.log("WAGUAN!" + err));
-       });*/
+    const handleChange = (e) => {
+        setSearchTerm(e.target.value);
+        console.log(searchTerm);
+    }
 
     useEffect(() => {
         getMovies();
@@ -30,13 +29,19 @@ const ListingsGallery = () => {
         <>
             <ListingsNav />
             <div className="centeredContent homeBackground">
+                <div className="searchContainer">
+                    <input id="search" type="text" placeholder="Search for films..."
+                        onChange={(e) => { handleChange(e) }} value={searchTerm} />
+                </div>
                 <div className="container">
                     <h2>Listings Gallery</h2>
                     <div className='movie_container'>
-                        {console.log(movies)}
-
                         {movies.map((movie) => {
-                            return <Movie title={movie.title} actors={movie.actors.toString()} director={movie.director} showingTimes={movie.showings.toString()} screen="1" />
+                            if (movie.title.toLowerCase().includes(searchTerm.toLowerCase())) {
+                                return <Movie key={movie.title} title={movie.title} actors={movie.actors.toString()}
+                                    director={movie.director} showingTimes={movie.showings.toString()}
+                                    screen="1" />
+                            }
                         })
                         }
                     </div>
