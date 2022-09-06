@@ -1,6 +1,6 @@
 import './paymentConfirm.css'
 
-const PaymentConfirm = (cardName, children, adults, concession, film, showing) => {
+const PaymentConfirm = ({cardName, children, adults, concession, film, showing}) => {
 
     return (
         <>

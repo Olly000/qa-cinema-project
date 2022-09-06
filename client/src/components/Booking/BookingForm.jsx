@@ -20,16 +20,7 @@ const BookingForm = () => {
     // these just here until backend is made and RetrieveFilms can supply the film name array
     const tempFilmList = ['Nope', 'Toy Story', 'Batman', 'Dune'];
     const tempShowingList = ['Friday 10 September, 14.00', 'Friday 10 September, 17.00', 'Saturday 11 September, 15.00'];
-
     const tempTickets = 6;
-
-    const prices = {
-        adult: 10,
-        child: 6,
-        concession: 7
-    }
-
-    const total = ((adults * prices.adult) + (children * prices.child) + (concession * prices.concession));
 
     let ticketNumber = adults + children + concession;
 
@@ -75,10 +66,10 @@ const BookingForm = () => {
             <fieldset className="booking-form">
                 <legend> Tickets</legend>
                 <label> Choose Film</label>
-                <FilmInput data={tempFilmList} name="film" disabled={false} onChange={input => selectFilm(input.target.value)} />
+                <FilmInput data={['--select film--', ...tempFilmList]} name="film" disabled={false} onChange={input => selectFilm(input.target.value)} />
 
                 <label> Choose Showing</label>
-                <ShowingInput data={tempShowingList} name="showing" disabled={disableShowing} onChange={input => setShowing(input.target.value)} />
+                <ShowingInput data={['--select showing--', ...tempShowingList]} name="showing" disabled={disableShowing} onChange={input => setShowing(input.target.value)} />
 
                 <label htmlFor="ad-tix">Number of Adult Tickets: </label><input type="text" className="in-fields"
                                                                                 name="ad-tix" size="2"
