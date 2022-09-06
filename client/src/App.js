@@ -8,6 +8,8 @@ import About from './components/About/About';
 import { Routes, Route } from 'react-router-dom';
 import ListingsGallery from './components/ListingsGallery/ListingsGallery';
 import Home from './components/Home/Home';
+import Contact from './components/Contact/ContactPage';
+import GettingThere from './components/GettingThere/GettingThere';
 
 
 
@@ -22,6 +24,9 @@ function App() {
         <Route path="/screens/*" element={<Screens />} />
         <Route path="/listings" element={<ListingsGallery />} />
         <Route path='/about' element={<About />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/openingTimes' element={<Home />} />
+        <Route path='/gettingThere' element={<GettingThere />} />
       </Routes>
       <Footer />
     </>

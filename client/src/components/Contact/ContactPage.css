@@ -1,16 +1,8 @@
-.header {
-    text-align: center;
-}
-
 .ContactName {
-    padding: 0;
-    margin-bottom: 10px;
     background-color:aliceblue;
 }
 
 .ContactComment {
-    padding: 0;
-    margin-bottom: 15px;
     background-color: aliceblue;
 }
 
