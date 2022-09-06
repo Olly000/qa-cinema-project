@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Movie from './sub-components/Movie';
 import styles from './ListingsGallery.css';
 import ListingsNav from "./sub-components/ListingsNav";
-import SearchBar from "../HeaderNFooter/sub-components/SearchBar.jsx";
 
 const ListingsGallery = () => {
     const [movies, setMovies] = useState([]);
@@ -39,8 +38,7 @@ const ListingsGallery = () => {
                         {movies.map((movie) => {
                             if (movie.title.toLowerCase().includes(searchTerm.toLowerCase())) {
                                 return <Movie key={movie.title} title={movie.title} actors={movie.actors.toString()}
-                                    director={movie.director} showingTimes={movie.showings.toString()}
-                                    screen="1" />
+                                    director={movie.director} screen="1" />
                             }
                         })
                         }

@@ -4,8 +4,8 @@ import { NavLink } from "reactstrap";
 const ListingsNav = () => {
     return(
         <nav>
-            <NavLink>Currently Showing</NavLink>
-            <NavLink>Upcoming Films</NavLink>
+            <NavLink to="/listings/">Currently Showing</NavLink>
+            <NavLink to="/listings/">Upcoming Films</NavLink>
         </nav>
     );
 }

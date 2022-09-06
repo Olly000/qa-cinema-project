@@ -8,15 +8,14 @@ const MovieSchema = new Schema({
         maxlength: 255,
         minlength: 1
     },
-    actors: [String],
+    actors: {type: [String],
+        required: true},
     director: {type: String,
         required: true,},
     image: {type: String,
         required: true},
-    showings: [{
-        screen: String,
-        time: Date
-    }]
+    releaseDate: {type: Date,
+    required: true}
 });
 
 module.exports = MovieSchema;
