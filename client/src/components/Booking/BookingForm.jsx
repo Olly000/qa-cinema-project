@@ -4,10 +4,12 @@ import {useState} from "react";
 import './booking.css';
 import {useNavigate} from 'react-router';
 import ShowingInput from "./ShowingInput";
+import {useEffect} from "react";
 
 const BookingForm = () => {
 
-
+    const [movies, setMovies] = useState([]);
+    const [showingsForFilm, setShowingsForFilm] = useState([]);
     const [film, setFilm] = useState('');
     const [showing, setShowing] = useState('');
     const [adults, setAdults] = useState(0);
@@ -15,7 +17,13 @@ const BookingForm = () => {
     const [concession, setConcession] = useState(0);
     const [disableShowing, setDisableShowing] = useState(true);
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+
+    const baseURL = `http://localhost:4494`;
+
+    useEffect(() => {
+        retrieveFilms();
+    }, []);
 
     // these just here until backend is made and RetrieveFilms can supply the film name array
     const tempFilmList = ['Nope', 'Toy Story', 'Batman', 'Dune'];
@@ -29,14 +37,25 @@ const BookingForm = () => {
         child: 6,
         concession: 7
     }
-    let total = (adults * prices.adult) + (children * prices.child) + (concession * prices.concession)
+    let total = (adults * prices.adult) + (children * prices.child) + (concession * prices.concession);
+
+
+
+    const retrieveShowings = () => {
+        fetch(`${baseURL}/movies/showings:${film}`, {method: 'get'})
+            .then(res => res.json())
+            .then(res => setShowingsForFilm(res))
+            .catch(err => console.log(err));
+    }
+
     const selectFilm = (input) => {
         setFilm(input);
+        retrieveShowings();
         setDisableShowing(false);
     }
 
     const checkAvailable = () => {
-        fetch("./api/checkSeats") // TODO: check the endpoint matches this
+        fetch(`${baseURL}/movies/checkSeats`) // TODO: check the endpoint matches this
             .then(async response => {
                 let content = await response.json();
                 if (ticketNumber > content.ticketsLeft) { // TODO: replace this var with result of request
@@ -49,54 +68,59 @@ const BookingForm = () => {
             .catch(error => console.log(error));
     }
 
-    const RetrieveFilms = () => {
-        // TODO: retrieve the list of films that are currently showing from the db
-        return [];
+    const retrieveFilms = () => {
+        fetch(`${baseURL}/movies/movieTitles`, {method: 'get'})
+            .then(res => res.json())
+            .then(res => setMovies(res))
+            .catch(err => console.log(err));
     }
+    console.log('result of movies get: ', movies);
 
-    const RetrieveShowings = () => {
-        // TODO: retrieve the list of showings for the selected film from the db
-        return [];
-    }
 
-    const handleSubmit = () => {
-        fetch(`/updateTicketsLeft/:${ticketNumber}`)  // TODO: pass state without this fucking up
-            .then((response) => console.log(response.status));
+const handleSubmit = () => {
+    fetch(`/updateTicketsLeft/:${ticketNumber}`)  // TODO: pass state without this fucking up
+        .then((response) => console.log(response.status));
 
-        navigate('/payment', {state: {film: film, showing: showing, adults: adults,
-                children: children, concession: concession, ticketNumber: ticketNumber}});
-    }
+    navigate('/payment', {
+        state: {
+            film: film, showing: showing, adults: adults,
+            children: children, concession: concession, ticketNumber: ticketNumber
+        }
+    });
+}
 
-    return (
-        <>
-            <fieldset className="booking-form">
-                <legend> Tickets</legend>
-                <label> Choose Film</label>
-                <FilmInput data={['--select film--', ...tempFilmList]} name="film" disabled={false} onChange={input => selectFilm(input.target.value)} />
+return (
+    <>
+        <fieldset className="booking-form">
+            <legend> Tickets</legend>
+            <label> Choose Film</label>
+            <FilmInput data={['--select film--', ...movies]} name="film" disabled={false}
+                       onChange={input => selectFilm(input.target.value)}/>
 
-                <label> Choose Showing</label>
-                <ShowingInput data={['--select showing--', ...tempShowingList]} name="showing" disabled={disableShowing} onChange={input => setShowing(input.target.value)} />
+            <label> Choose Showing</label>
+            <ShowingInput data={['--select showing--', ...tempShowingList]} name="showing" disabled={disableShowing}
+                          onChange={input => setShowing(input.target.value)}/>
 
-                <label htmlFor="ad-tix">Number of Adult Tickets: </label><input type="text" className="in-fields"
-                                                                                name="ad-tix" size="2"
-                                                                                placeholder="0"
-                                                                                onChange={input => setAdults(Number(input.target.value))}/>
-                <label htmlFor="ch-tix">Number of Child Tickets: </label><input type="text" className="in-fields"
-                                                                                name="ch-tix" size="2"
-                                                                                placeholder="0"
-                                                                                onChange={input => setChildren(Number(input.target.value))}/>
-                <label htmlFor="co-tix">Number of Concession Tickets: </label><input type="text" className="in-fields"
-                                                                                     name="co-tix" size="2"
-                                                                                     placeholder="0"
-                                                                                     onChange={input => setConcession(Number(input.target.value))}/>
-                <button onClick={handleSubmit} id="buy-button" className="in-fields"> Buy Tickets</button>
-            </fieldset>
-            <div>{checkAvailable()}</div>
-            <div className="total">
-                Total cost is: £{total}
-            </div>
-        </>
-    )
+            <label htmlFor="ad-tix">Number of Adult Tickets: </label><input type="text" className="in-fields"
+                                                                            name="ad-tix" size="2"
+                                                                            placeholder="0"
+                                                                            onChange={input => setAdults(Number(input.target.value))}/>
+            <label htmlFor="ch-tix">Number of Child Tickets: </label><input type="text" className="in-fields"
+                                                                            name="ch-tix" size="2"
+                                                                            placeholder="0"
+                                                                            onChange={input => setChildren(Number(input.target.value))}/>
+            <label htmlFor="co-tix">Number of Concession Tickets: </label><input type="text" className="in-fields"
+                                                                                 name="co-tix" size="2"
+                                                                                 placeholder="0"
+                                                                                 onChange={input => setConcession(Number(input.target.value))}/>
+            <button onClick={handleSubmit} id="buy-button" className="in-fields"> Buy Tickets</button>
+        </fieldset>
+        <div>{checkAvailable()}</div>
+        <div className="total">
+            Total cost is: £{total}
+        </div>
+    </>
+)
 }
 
 export default BookingForm;

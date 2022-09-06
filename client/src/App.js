@@ -8,8 +8,9 @@ import About from './components/About/About';
 import { Routes, Route } from 'react-router-dom';
 import ListingsGallery from './components/ListingsGallery/ListingsGallery';
 import Home from './components/Home/Home';
-
-
+import BookingPage from './components/Booking/BookingPage'
+import Payment from './components/PaymentPage/Payment'
+import StripePayment from "./components/PaymentPage/StripePayment";
 
 function App() {
   return (
@@ -22,6 +23,8 @@ function App() {
         <Route path="/screens/*" element={<Screens />} />
         <Route path="/listings" element={<ListingsGallery />} />
         <Route path='/about' element={<About />} />
+          <Route path='/booking' element={<BookingPage/>}/>
+          <Route path='/payment' element={<StripePayment/>}/>
       </Routes>
       <Footer />
     </>
