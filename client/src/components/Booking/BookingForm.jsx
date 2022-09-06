@@ -24,6 +24,12 @@ const BookingForm = () => {
 
     let ticketNumber = adults + children + concession;
 
+    const prices = {
+        adult: 10,
+        child: 6,
+        concession: 7
+    }
+    let total = (adults * prices.adult) + (children * prices.child) + (concession * prices.concession)
     const selectFilm = (input) => {
         setFilm(input);
         setDisableShowing(false);
@@ -58,7 +64,7 @@ const BookingForm = () => {
             .then((response) => console.log(response.status));
 
         navigate('/payment', {state: {film: film, showing: showing, adults: adults,
-                children: children, concession: concession, total: total, ticketNumber: ticketNumber}});
+                children: children, concession: concession, ticketNumber: ticketNumber}});
     }
 
     return (
