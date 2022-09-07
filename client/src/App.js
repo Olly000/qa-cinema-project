@@ -16,6 +16,7 @@ import StripePayment from "./components/PaymentPage/StripePayment";
 
 import Contact from './components/Contact/ContactPage';
 import GettingThere from './components/GettingThere/GettingThere';
+import ListingsNav from './components/ListingsGallery/sub-components/ListingsNav';
 
 
 function App() {
@@ -27,7 +28,11 @@ function App() {
         <Route path="/classification" element={<Classification />} />
         <Route path="/placesToGo/*" element={<PlacesToGo />} />
         <Route path="/screens/*" element={<Screens />} />
-        <Route path="/listings" element={<ListingsGallery />} />
+        <Route path="/listings" element={<ListingsNav />} >
+          <Route index element={<ListingsGallery />} />
+          <Route path="current" element={<ListingsGallery upcoming={false} current={true} />} />
+          <Route path="upcoming" element={<ListingsGallery upcoming={true} current={false} />} />
+        </Route>
         <Route path='/about' element={<About />} />
           <Route path='/booking' element={<BookingPage/>}/>
           <Route path='/payment' element={<StripePayment/>}/>
