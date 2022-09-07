@@ -1,6 +1,7 @@
-.container-fluid {
-    display: flex;
-    justify-content: center;
+
+
+td, tr, th, thead, tbody {
+    padding: 10px;
 }
 
 .id--number {

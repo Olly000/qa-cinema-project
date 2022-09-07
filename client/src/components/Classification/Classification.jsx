@@ -5,7 +5,7 @@ const Classification = () => {
 
 
     return (
-        <div className="placesToGo">
+        <div className="centeredContent">
             <div className="container">
                 <h2>Age Classifications</h2>
                 <ClassText />

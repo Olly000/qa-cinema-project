@@ -4,7 +4,9 @@
 
 .transport-icon {
     height: 2em;
+    width: 2em;
 }
+
 
 figure {
     display: flex;
@@ -18,11 +20,3 @@ figcaption {
     font-family: 'Lato', sans-serif;
 }
 
-#cinePic {
-    align-self: center;
-    width: 30%;
-}
-
-#address {
-    height: 25em;
-}
