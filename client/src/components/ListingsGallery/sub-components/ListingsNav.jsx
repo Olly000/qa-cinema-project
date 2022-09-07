@@ -1,12 +1,16 @@
-import { NavLink } from "reactstrap";
+import { Outlet } from "react-router-dom";
+import {NavLink } from "react-router-dom";
 
 
 const ListingsNav = () => {
-    return(
-        <nav>
-            <NavLink to="/listings/">Currently Showing</NavLink>
-            <NavLink to="/listings/">Upcoming Films</NavLink>
-        </nav>
+    return (
+        <>
+            <nav>
+                <NavLink className="navLink" to="/listings/current">Currently Showing</NavLink>
+                <NavLink className="navLink" to="/listings/upcoming">Upcoming Films</NavLink>
+            </nav>
+            <Outlet />
+        </>
     );
 }
 

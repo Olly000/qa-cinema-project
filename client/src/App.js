@@ -10,6 +10,7 @@ import ListingsGallery from './components/ListingsGallery/ListingsGallery';
 import Home from './components/Home/Home';
 import Contact from './components/Contact/ContactPage';
 import GettingThere from './components/GettingThere/GettingThere';
+import ListingsNav from './components/ListingsGallery/sub-components/ListingsNav';
 
 
 
@@ -22,7 +23,11 @@ function App() {
         <Route path="/classification" element={<Classification />} />
         <Route path="/placesToGo/*" element={<PlacesToGo />} />
         <Route path="/screens/*" element={<Screens />} />
-        <Route path="/listings" element={<ListingsGallery />} />
+        <Route path="/listings" element={<ListingsNav />} >
+          <Route index element={<ListingsGallery />} />
+          <Route path="current" element={<ListingsGallery upcoming={false} current={true} />} />
+          <Route path="upcoming" element={<ListingsGallery upcoming={true} current={false} />} />
+        </Route>
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/openingTimes' element={<Home />} />
