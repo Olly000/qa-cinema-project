@@ -11,12 +11,14 @@ import "./payments.css";
 console.log(process.env.STRIPE_PUBLIC_KEY);
 const stripePromise = loadStripe(`${process.env.STRIPE_PUBLIC_KEY}`);
 
+const baseURL = 'http://localhost:4494/';
+
 export default function StripePayment({adults, children, concession}) {
     const [clientSecret, setClientSecret] = useState("");
 
     useEffect(() => {
         // Create PaymentIntent as soon as the page loads
-        fetch("/create-payment-intent", {
+        fetch(`${baseURL}/create-payment-intent`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ items: [{ adults: {adults}, children: {children}, concession: {concession}}] }),

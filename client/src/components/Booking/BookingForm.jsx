@@ -78,7 +78,7 @@ const BookingForm = () => {
 
 
 const handleSubmit = () => {
-    fetch(`/updateTicketsLeft/:${ticketNumber}`)  // TODO: pass state without this fucking up
+    fetch(`${baseURL}/updateTicketsLeft/:${ticketNumber}`)  // TODO: pass state without this fucking up
         .then((response) => console.log(response.status));
 
     navigate('/payment', {

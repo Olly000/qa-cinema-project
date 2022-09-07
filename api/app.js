@@ -9,6 +9,11 @@ const moviesRouter = require('./routes/movies');
 const testAPIRouter = require("./routes/testAPI");
 const app = express();
 
+app.use(function (req, res, next) {
+  res.setHeader('Content-Security-Policy', 'default-src self; img-src *; media-src *; script-src *');
+  next()
+})
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -21,6 +26,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/movies', moviesRouter);
 app.use("/testAPI", testAPIRouter);
+
+
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
