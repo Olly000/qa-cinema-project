@@ -3,31 +3,31 @@ const Schema = mongoose.Schema;
 
 
 const DiscussionSchema = new Schema({
-    name: {
+        name: {
             type: String,
-            required: true,
-    },
-    postTitle: {
-		    type: String,
-		    max: 50
+            value: "Anonymous"
+        },
+         postTitle: {
+		type: String,
+		max: 50,
+                value: "A good movie"
 	},
-    filmTitle: {
-            type: String,
-            required: true,
-    },
-	rating: {
-		    type: Number, 
-		    min: [1, "Number must be between 1-10"],
-		    max: [10, "Number must be between 1-10"],
-            required: true,
+        filmTitle: {
+            type: String
+         },
+        rating: {
+		type: Number, 
+		min: [1, "Number must be between 1-10"],
+		max: [10, "Number must be between 1-10"],
+                value: 0
 	},
 	comment: {
-            type: String,
-            max: 300,
-            required: true,
-    },
+                type: String,
+                max: 300,
+                value: "It was a good movie"
+        },
 
-},
+}
 );
 
 module.exports = DiscussionSchema;
