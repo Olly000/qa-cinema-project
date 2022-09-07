@@ -12,6 +12,7 @@ import Contact from './components/Contact/ContactPage';
 import GettingThere from './components/GettingThere/GettingThere';
 import ListingsNav from './components/ListingsGallery/sub-components/ListingsNav';
 import DiscussionBoard from './components/discussionBoard/discussionBoard';
+import BookingPage from './components/Booking/BookingPage';
 
 
 
@@ -34,6 +35,7 @@ function App() {
         <Route path='/openingTimes' element={<Home />} />
         <Route path='/gettingThere' element={<GettingThere />} />
         <Route path='/discussion' element={<DiscussionBoard />} />
+        <Route path='/booking/:title' element={<BookingPage />} />
       </Routes>
       <Footer />
     </>
