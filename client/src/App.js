@@ -11,6 +11,7 @@ import Home from './components/Home/Home';
 import Contact from './components/Contact/ContactPage';
 import GettingThere from './components/GettingThere/GettingThere';
 import ListingsNav from './components/ListingsGallery/sub-components/ListingsNav';
+import DiscussionBoard from './components/discussionBoard/discussionBoard';
 
 
 
@@ -32,6 +33,7 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path='/openingTimes' element={<Home />} />
         <Route path='/gettingThere' element={<GettingThere />} />
+        <Route path='/discussion' element={<DiscussionBoard />} />
       </Routes>
       <Footer />
     </>
