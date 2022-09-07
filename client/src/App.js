@@ -5,18 +5,13 @@ import Classification from './components/Classification/Classification';
 import PlacesToGo from './components/Places-To-Go/PlacesTogo';
 import Screens from './components/Screens/Screens';
 import About from './components/About/About';
-import Contact from './components/Contact/ContactPage';
 import { Routes, Route } from 'react-router-dom';
 import ListingsGallery from './components/ListingsGallery/ListingsGallery';
 import Home from './components/Home/Home';
-
-import BookingPage from './components/Booking/BookingPage'
-import Payment from './components/PaymentPage/Payment'
-import StripePayment from "./components/PaymentPage/StripePayment";
-
 import Contact from './components/Contact/ContactPage';
 import GettingThere from './components/GettingThere/GettingThere';
 import ListingsNav from './components/ListingsGallery/sub-components/ListingsNav';
+
 
 
 function App() {
@@ -34,13 +29,9 @@ function App() {
           <Route path="upcoming" element={<ListingsGallery upcoming={true} current={false} />} />
         </Route>
         <Route path='/about' element={<About />} />
-          <Route path='/booking' element={<BookingPage/>}/>
-          <Route path='/payment' element={<StripePayment/>}/>
-
         <Route path='/contact' element={<Contact />} />
         <Route path='/openingTimes' element={<Home />} />
         <Route path='/gettingThere' element={<GettingThere />} />
-
       </Routes>
       <Footer />
     </>
