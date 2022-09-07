@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import CommentForm from './commentForm';
+import Post from './Post';
 
 
 const DiscussionBoard = () => {

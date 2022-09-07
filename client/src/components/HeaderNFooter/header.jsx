@@ -16,6 +16,7 @@ function Header() {
                     <li><NavLink to='/screens' className="navLink">Our Screens</NavLink></li>
                     <li><NavLink to='/gettingThere' className="navLink">Getting There</NavLink></li>
                     <li><NavLink to='/placesToGo' className="navLink">Places To Go</NavLink></li>
+                    <li><NavLink to='/discussion' className="navLink">Discussion Board</NavLink></li>
             </nav>
         </header>
     );
