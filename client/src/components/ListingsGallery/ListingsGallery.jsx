@@ -2,16 +2,16 @@ import React, { useEffect, useState } from "react";
 import Movie from './sub-components/Movie';
 import styles from './ListingsGallery.css';
 import ListingsNav from "./sub-components/ListingsNav";
-import SearchBar from "../HeaderNFooter/sub-components/SearchBar.jsx";
 
-const ListingsGallery = () => {
+const ListingsGallery = ({ upcoming, current }) => {
     const [movies, setMovies] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
     const [apiResponse, setApiResponse] = useState('Hello');
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
 
     const handleChange = (e) => {
         setSearchTerm(e.target.value);
-        console.log(searchTerm);
     }
 
     useEffect(() => {
@@ -25,9 +25,47 @@ const ListingsGallery = () => {
             .catch(err => console.log(err));
     }
 
+    const rend = () => {
+        if (upcoming == true) {
+            console.log("if");
+            return movies.map((movie) => {
+                let substr = movie.releaseDate.substring(0, 10);
+                let movieDate = new Date(substr);
+                if (movie.title.toLowerCase().includes(searchTerm.toLowerCase()) && movieDate > today) {
+                    console.log("Upcoming");
+                    return <Movie key={movie.title} title={movie.title} actors={movie.actors.toString()}
+                        director={movie.director} screen="1" releaseDate={movieDate} />
+                }
+            })
+        } else if (current == true) {
+            console.log("else if");
+            return movies.map((movie) => {
+                let substr = movie.releaseDate.substring(0, 10);
+                let movieDate = new Date(substr);
+                if (movie.title.toLowerCase().includes(searchTerm.toLowerCase()) && movieDate < today) {
+                    console.log("Current");
+                    return <Movie key={movie.title} title={movie.title} actors={movie.actors.toString()}
+                        director={movie.director} screen="1" releaseDate={movieDate} />
+                }
+            })
+        } else {
+            console.log("else");
+            return movies.map((movie) => {
+                let substr = movie.releaseDate.substring(0, 10);
+                let movieDate = new Date(substr);
+                if (movie.title.toLowerCase().includes(searchTerm.toLowerCase())) {
+                    console.log("Both");
+                    return <Movie key={movie.title} title={movie.title} actors={movie.actors.toString()}
+                        director={movie.director} screen="1" releaseDate={movieDate} />
+                    
+                }
+            })
+        }
+
+    }
+
     return (
         <>
-            <ListingsNav />
             <div className="centeredContent homeBackground">
                 <div className="searchContainer">
                     <input id="search" type="text" placeholder="Search for films..."
@@ -36,14 +74,7 @@ const ListingsGallery = () => {
                 <div className="container">
                     <h2>Listings Gallery</h2>
                     <div className='movie_container'>
-                        {movies.map((movie) => {
-                            if (movie.title.toLowerCase().includes(searchTerm.toLowerCase())) {
-                                return <Movie key={movie.title} title={movie.title} actors={movie.actors.toString()}
-                                    director={movie.director} showingTimes={movie.showings.toString()}
-                                    screen="1" />
-                            }
-                        })
-                        }
+                        {rend()}
                     </div>
                 </div>
             </div>
