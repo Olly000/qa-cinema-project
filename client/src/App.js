@@ -5,6 +5,7 @@ import Classification from './components/Classification/Classification';
 import PlacesToGo from './components/Places-To-Go/PlacesTogo';
 import Screens from './components/Screens/Screens';
 import About from './components/About/About';
+import Contact from './components/Contact/ContactPage';
 import { Routes, Route } from 'react-router-dom';
 import ListingsGallery from './components/ListingsGallery/ListingsGallery';
 import Home from './components/Home/Home';

@@ -2,16 +2,17 @@ import "./ContactPage.css"
 
 function Contact() {
     return (
-        <div className="centeredContent">
-            <div className="columnGapContainer">
-                <div>
-                    <form className="form--data columnGapContainer" action="mailto:exo.silva.38@gmail.com"
-                        enctype="multiplart/form-data" name="EmailForm">
-                        Name:<br />
-                        <input type="text" size="50" className="ContactName" name="ContactName" /><br /><br />
+        <header className="header">
+            <div>
+                <form className="form--data" action="mailto:exo.silva.38@gmail.com"
+                enctype="multiplart/form-data" name="EmailForm">
+                    Name:<br/>
+                    <input type="text" size="50" className="ContactName" name="ContactName"/><br/><br/>
+                    Subject:<br/>
+                    <input type="text" size="50" className="ContactSubject" name="ContactSubject"/><br/><br/>
 
-                        Message:<br />
-                        <textarea className="ContactComment" name="ContactComment" rows="12" cols="24" /><br /><br />
+                    Message:<br/>
+                    <textarea className="ContactComment" name="ContactComment" rows="12" cols="36"/><br/><br/>
 
                         <input type="submit" value="Submit" />
 
