@@ -12,3 +12,15 @@ mongoose.connect("mongodb://localhost:27017/qa-test").then(res=>{
 const DiscussionModel = mongoose.model("Discussions", DiscussionSchema);
 const MovieModel = mongoose.model("Discussions", MovieSchema);
 
+const newMovie1 = new MovieModel({
+
+    title:"Three Thousand Years of Longing",
+    actors: ["Idris Elba", " Tilda Swinton", " Aamito Lagum", " Nicolas Mouawad"],
+    director: "George Miller",
+    image: "img/three_thousand_years_of_longing.jpg"
+        
+});
+
+const newDiscussion1 = new DiscussionModel({
+    
+})
