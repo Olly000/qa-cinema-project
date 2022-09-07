@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 const mongoose = require("mongoose");
-const discussionSchema = require("../Schemas/discussionSchema");
+const discussionSchema = require("../../schemas/discussionSchema.js");
 const Post = mongoose.model('DiscussionBoard', discussionSchema);
 
 

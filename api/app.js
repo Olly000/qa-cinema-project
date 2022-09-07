@@ -6,7 +6,7 @@ const logger = require('morgan');
 const cors = require('cors');
 const indexRouter = require('./routes/index');
 const moviesRouter = require('./routes/movies');
-const discussionRouter = require('./routes/dicussion/DiscussionBoardApi.js');
+const discussionRouter = require('./routes/discussion/DiscussionBoardApi.js');
 const testAPIRouter = require("./routes/testAPI");
 const app = express();
 
