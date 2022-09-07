@@ -1,0 +1,19 @@
+
+
+.footer {
+    display: flex;
+    background-color: #132863;
+  }
+  
+  footer {
+    width: 100%;
+  }
+  
+  footer > p {
+    color: white;
+  }
+  
+  .footerList {
+    display: flex;
+    justify-content: space-around;
+  }

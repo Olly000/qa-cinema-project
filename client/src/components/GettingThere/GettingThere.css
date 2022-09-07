@@ -1,0 +1,22 @@
+.map-box {
+    height: 20em;
+}
+
+.transport-icon {
+    height: 2em;
+    width: 2em;
+}
+
+
+figure {
+    display: flex;
+}
+
+figcaption {
+    justify-content: center;
+    text-align: center;
+    align-self: baseline;
+    align-items: baseline;
+    font-family: 'Lato', sans-serif;
+}
+

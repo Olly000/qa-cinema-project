@@ -1,0 +1,58 @@
+Header {
+    height: 35vh;
+  }
+  
+  .header {
+    width: 100%;
+    height: 35vh;
+    background-image: url("./img/film.jpg");
+    background-size: cover;
+    background-position: 50%;
+  }
+  
+  h1 {
+    color: white;
+    font-size: 10vmin;
+  }
+  .banner {
+    height: 25vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  
+  }
+  
+  nav {
+  width: 100%;
+  position: sticky;
+   top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #132863;
+  height: 10vh;
+  align-self: flex-start;
+  color: white;
+  }
+
+  nav > li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20vw;
+    border-radius: 10px 10px 0px 0px;
+  }
+
+
+  .searchContainer {
+    width: 25vw;
+  }
+  
+  #search {
+    padding: 5%;
+    margin: 5%;
+    border-radius: 10px;
+    width: 20vw;
+    box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.447), inset -3px -3px 3px rgba(0, 0, 0, 0.447);
+  }
