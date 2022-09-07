@@ -41,7 +41,7 @@ const CommentForm = ({ handleCreatePost }) => {
         fetch(`/discussionBoardApi`).then((
             response) => console.log(response.status));
 */
-        axios.post('http://localhost:27017/DiscussionBoard', {body}).then(res => res.json()).then(data => console.log(data));
+        axios.post('http://localhost:27017/cinema_db/discussionboards', {body}).then(res => res.json()).then(data => console.log(data));
     };
 
 }

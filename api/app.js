@@ -28,7 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/movies', moviesRouter);
 app.use("/testAPI", testAPIRouter);
-app.use('/discussionBoardApi', discussionRouter);
+app.use('/discussionBoard', discussionRouter);
 
 
 // catch 404 and forward to error handler
@@ -50,6 +50,10 @@ const mongoose = require('mongoose');
 mongoose.connect('mongodb://127.0.0.1:27017/cinema_db', { useNewUrlParser: true }).then(() => {
   console.log("connection ready");
 }, (err) => { console.log("THIS IS THE ERROR I AM PRINTING: " + err) });
+
+const server = app.listen(2020,() => {
+  console.log(`server started listening on port ${server.address().port}`);
+})
 
 module.exports = app;
 
