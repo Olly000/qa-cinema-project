@@ -1,18 +1,18 @@
 import React from 'react'
-//import './PlacesToGo.css'
+import './PlacesToGo.css'
 
-import DickensInn from '../Places-To-Go/DickensInn.jpg'
-import EmiliasPasta from '../Places-To-Go/EmiliasPasta.jpg'
-import naturalKitchen from '../Places-To-Go/naturalKitchen.jpg'
-import Townhouse360 from '../Places-To-Go/Townhouse360.jpg'
+import DickensInn from './img/DickensInn.jpg'
+import EmiliasPasta from './img/EmiliasPasta.jpg'
+import naturalKitchen from './img/naturalKitchen.jpg'
+import Townhouse360 from './img/Townhouse360.jpg'
 
 function PlacesToGo() {
     return (
-        <div className='placesToGo'>
+        <div className='centeredContent placesToGoBackground'>
             <div className='container'>
                 <h2>Places-To-Go</h2>
                 <p>Local bars and restaurants near to the cinema to enhance your trip and experience with us.</p>
-                <div className="venuesContainer">
+                <div className="columnGapContainer">
                     <div className="venueContainer">
                         <div className="img-container">
                             <a href="https://www.dickensinn.co.uk/" target="_blank" rel="noreferrer">

@@ -1,0 +1,37 @@
+body {
+    background-color: #4c4c4c;
+    color: white;
+}
+
+h1 {
+    color: yellow;
+    text-align: center;
+}
+
+.booking-form {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    padding: 0.35em 0.75em 0.625em;
+    border: 2px groove;
+    margin-left: 2em;
+
+}
+
+.total {
+    border:4px groove;
+    width: 20%;
+    margin: 2em;
+}
+
+.in-fields {
+    margin-left: 2em;
+    margin-bottom: 2em;
+    width: 20em;
+}
+
+label {
+    margin-left: 2em;
+    margin-bottom: 0.2em;
+}
+

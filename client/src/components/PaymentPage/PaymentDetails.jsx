@@ -1,17 +1,8 @@
 import './payments.css';
 import {useState} from "react";
-import { Link } from 'react-router-dom'
-import axios from 'axios'
 
-const PaymentDetails = (children,adults,concession,film,showing) => {
 
-    let body = {
-        "children": children,
-        "adults": adults,
-        "concession": concession,
-        "film": film,
-        "showing": showing
-    }
+const PaymentDetails = ({total}) => {
 
     const [cardNum, setCardNum] = useState('');
     const [cardName, setCardName] = useState('');
@@ -19,36 +10,33 @@ const PaymentDetails = (children,adults,concession,film,showing) => {
     const [cvc, setCvc] = useState('');
     const [isChecked, setIsChecked] = useState(false);
 
-    //const expPattern = /\d\d\/\d\d/
+
+    const savePaymentDetails = () => {
+        //TODO: send user info to the db
+    }
+
+    const sendToStripe = () => {
+        //TODO: send state info to an external payment processor
+    }
 
     const handleSubmit = (event) => {
         console.log(event);
         if(!isChecked) {
             event.preventDefault();
         } else {
-            //TODO: send user info to the db
-
-            body += {"cardName": cardName};
-            axios.post('http://locahost:27017/payment', {
-                body}).then(res => res.json()).then(data => console.log(data));
+            savePaymentDetails();
         }
-        //TODO: send state info to an external payment processor
-
-        let cardData = {
-            'cardNumber': cardNum,
-            'accountHolderName': cardName,
-            'cardExpiryData': expiry,
-            'CVC': cvc
-        }
+        sendToStripe();
     }
 
     const handleCheck = () => {
         setIsChecked(!isChecked);
-        
 
     }
 
     return(
+        <>
+
         <fieldset id="payment-fields" className="payment-container"><legend className="pay-text">
             Please enter your payment details below</legend>
             <br/>
@@ -63,9 +51,10 @@ const PaymentDetails = (children,adults,concession,film,showing) => {
             <span className="pay-text"><input type="checkbox" onChange={handleCheck}/>
             Click here to save your details for next time</span>
             <br/>
-            <button onClick={handleSubmit}><Link to="/payment/confirm">Submit details</Link></button>
+            <button onClick={handleSubmit}>Submit details</button>
             <br/>
         </fieldset>
+            </>
     )
 }
 
