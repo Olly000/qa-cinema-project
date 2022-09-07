@@ -23,11 +23,10 @@ const BookingForm = () => {
 
     useEffect(() => {
         retrieveFilms();
-    }, []);
+    });
 
-    // these just here until backend is made and RetrieveFilms can supply the film name array
-    const tempFilmList = ['Nope', 'Toy Story', 'Batman', 'Dune'];
-    const tempShowingList = ['Friday 10 September, 14.00', 'Friday 10 September, 17.00', 'Saturday 11 September, 15.00'];
+
+
     const tempTickets = 6;
 
     let ticketNumber = adults + children + concession;
@@ -40,9 +39,8 @@ const BookingForm = () => {
     let total = (adults * prices.adult) + (children * prices.child) + (concession * prices.concession);
 
 
-
     const retrieveShowings = () => {
-        fetch(`${baseURL}/movies/showings:${film}`, {method: 'get'})
+        fetch(`${baseURL}/movies/showings/${film}`, {method: 'get'})
             .then(res => res.json())
             .then(res => setShowingsForFilm(res))
             .catch(err => console.log(err));
@@ -51,6 +49,7 @@ const BookingForm = () => {
     const selectFilm = (input) => {
         setFilm(input);
         retrieveShowings();
+        console.log(showingsForFilm);
         setDisableShowing(false);
     }
 
@@ -78,8 +77,8 @@ const BookingForm = () => {
 
 
 const handleSubmit = () => {
-    fetch(`${baseURL}/updateTicketsLeft/:${ticketNumber}`)  // TODO: pass state without this fucking up
-        .then((response) => console.log(response.status));
+    // fetch(`${baseURL}/updateTicketsLeft/:${ticketNumber}`)  // TODO: pass state without this fucking up
+    //     .then((response) => console.log(response.status));
 
     navigate('/payment', {
         state: {
@@ -98,7 +97,7 @@ return (
                        onChange={input => selectFilm(input.target.value)}/>
 
             <label> Choose Showing</label>
-            <ShowingInput data={['--select showing--', ...tempShowingList]} name="showing" disabled={disableShowing}
+            <ShowingInput data={['--select showing--', ...showingsForFilm]} name="showing" disabled={disableShowing}
                           onChange={input => setShowing(input.target.value)}/>
 
             <label htmlFor="ad-tix">Number of Adult Tickets: </label><input type="text" className="in-fields"

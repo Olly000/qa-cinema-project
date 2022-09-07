@@ -11,6 +11,8 @@ import Home from './components/Home/Home';
 import Contact from './components/Contact/ContactPage';
 import GettingThere from './components/GettingThere/GettingThere';
 import ListingsNav from './components/ListingsGallery/sub-components/ListingsNav';
+import BookingPage from "./components/Booking/BookingPage";
+import Payment from "./components/PaymentPage/Payment";
 
 
 
@@ -32,6 +34,9 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path='/openingTimes' element={<Home />} />
         <Route path='/gettingThere' element={<GettingThere />} />
+          <Route path='/booking' element={<BookingPage/>} />
+          <Route path='/payment' element={<Payment/>} />
+      }
       </Routes>
       <Footer />
     </>
