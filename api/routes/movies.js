@@ -42,6 +42,14 @@ const showing4 = new showing(showingData[4]);
 const showing5 = new showing(showingData[5]);
 const showing6 = new showing (showingData[6]);
 const showing7 = new showing (showingData[7]);
+const showing8 = new showing(showingData[8]);
+const showing9 = new showing(showingData[9]);
+const showing10 = new showing(showingData[10]);
+const showing11= new showing(showingData[11]);
+const showing12 = new showing(showingData[12]);
+const showing13 = new showing(showingData[13]);
+const showing14 = new showing (showingData[14]);
+const showing15 = new showing (showingData[15]);
 
 showing.find({}).then(res => {
 if (res.length === 0) {
@@ -53,6 +61,14 @@ if (res.length === 0) {
     showing5.save().then(res => console.log("5 saved"));
     showing6.save().then(res => console.log("6 saved"));
     showing7.save().then(res => console.log("7 saved"));
+    showing8.save().then(res => console.log("8 saved"));
+    showing9.save().then(res => console.log("9 saved"));
+    showing10.save().then(res => console.log("10 saved"));
+    showing11.save().then(res => console.log("11 saved"));
+    showing12.save().then(res => console.log("12 saved"));
+    showing13.save().then(res => console.log("13 saved"));
+    showing14.save().then(res => console.log("14 saved"));
+    showing15.save().then(res => console.log("15 saved"));
 } else {
     console.log(res.length)
 }
@@ -81,11 +97,6 @@ router.get('/showings/:film', (req, res) => {
         res.send(shows.map(entry => {return ({time: entry.showtime, screen: entry.screen})}));
     })
 })
-
-// router.get('/checkSeats', (req, res) => {
-//     console.log(req.body);
-// });
-
 
 
 module.exports = router;

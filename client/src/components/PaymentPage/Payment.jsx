@@ -14,9 +14,9 @@ const Payment = () => {
     return (<>
             <h2> Make a payment</h2>
             <PaymentInfo film={data.film} showing={data.showing} adults={data.adults} children={data.children} concession={data.children} total={data.total} />
-            {/*<PaymentDetails total={data.total}/>*/}
-            <StripePayment adults={data.adults} children={data.children} concession={data.children}/>
-            <CancelOrderButton className="cancel-order" ticketNumber={data.ticketNumber}/>
+            <PaymentDetails total={data.total}/>
+            {/*<StripePayment adults={data.adults} children={data.children} concession={data.children}/>*/}
+            <CancelOrderButton className="cancel-order" total={data.total}/>
         </>
     )
 }
