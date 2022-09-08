@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const app = connect();
 const { default: mongoose } = require("mongoose");
 
-global.dburl = "mongodb://localhost:27017/mm-qa-cinema-test";
+global.dburl = "mongodb://localhost:27017/qa-test";
 const MoviesAPI = require("");
 const PaymentsAPI = require("");
 const DiscussionsAPI = require("");
