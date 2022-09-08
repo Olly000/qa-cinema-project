@@ -13,7 +13,7 @@ const DiscussionBoard = () => {
     }, []);
 
     const getComments = () => {
-        fetch("http://localhost:9000/comments", { method: 'get'})
+        fetch("http://localhost:9000/discussionBoard/get", { method: 'get'})
         .then(res => res.json())
         .then(res => setComments(res))
         .catch(err => console.log(err));
@@ -23,16 +23,18 @@ const DiscussionBoard = () => {
         <>
             <h2>Discussion Board</h2>
             <div className='post_container'>
-                {console.log(comments)}
 
               {  comments.map((post) => {
-                return <Post name={post.name} postTitle={post.postTitle.toString()} filmName={post.filmName} rating={post.rating} comment={post.comment} />
+                return (<> <Post name={post.name} postTitle={post.postTitle.toString()} filmTitle={post.filmTitle.toString()} rating={post.rating} comment={post.comment} />
+                <br/><br/></>
+                )
+            
                })
                }
 
-                
-
-
+            </div>
+            <div>
+                <CommentForm />
             </div>
         </>
     )
