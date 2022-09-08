@@ -21,6 +21,25 @@ const newMovie1 = new MovieModel({
         
 });
 
+//saves movie fill crete similar for all apis
+async function saveMovies(){
+    newMovie1.isNew = true;
+    await newMovie1.save();
+}    
+
 const newDiscussion1 = new DiscussionModel({
+    name: "Three Thousand Years Review",
     
 })
+// creates data fill in for all apis
+const createData = async () => {
+    //await clearCollections();
+    await saveMovies();
+}
+//fill in for all apis
+async function clearCollections(){
+
+    await MovieModel.deleteMany({});
+}
+
+module.exports = {createData, clearCollections};
