@@ -31,7 +31,7 @@ const PaymentDetails = () => {
             .catch(err => console.log(err));
     }
 
-    const sendToStripe = () => {
+    const confirmPayment = () => {
         //TODO: as stripe doesn't work this is meant to send to Leon's payment api then return the confirmation page
         // (added to the saveDetails api file but not refactored yet)
 
@@ -43,7 +43,7 @@ const PaymentDetails = () => {
         if(isChecked) {
             savePaymentDetails();
         }
-        sendToStripe();
+        confirmPayment();
         }
 
 
