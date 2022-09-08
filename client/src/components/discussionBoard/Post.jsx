@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 
-const Post = ({ name, postTitle, filmName, rating, comment }) => {
+const Post = ({ name, postTitle, filmTitle, rating, comment }) => {
     return (
         <div className="post">
            
             <div className="postInfo">
                 <h3>{postTitle}</h3>
                 <p><strong>Name: </strong>{name}</p>
-                <p><strong>Film: </strong>{filmName}</p>
+                <p><strong>Film: </strong>{filmTitle}</p>
                 <p><strong>Rating: </strong>{rating}</p>
                 <p><strong>Comment: </strong>{comment}</p>
                 

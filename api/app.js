@@ -51,9 +51,6 @@ mongoose.connect('mongodb://127.0.0.1:27017/cinema_db', { useNewUrlParser: true 
   console.log("connection ready");
 }, (err) => { console.log("THIS IS THE ERROR I AM PRINTING: " + err) });
 
-const server = app.listen(2020,() => {
-  console.log(`server started listening on port ${server.address().port}`);
-})
 
 module.exports = app;
 
