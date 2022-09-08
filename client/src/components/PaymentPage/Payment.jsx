@@ -16,7 +16,7 @@ const Payment = () => {
             <PaymentInfo film={data.film} showing={data.showing} adults={data.adults} children={data.children} concession={data.children} total={data.total} />
             <PaymentDetails total={data.total}/>
             {/*<StripePayment adults={data.adults} children={data.children} concession={data.children}/>*/}
-            <CancelOrderButton className="cancel-order" total={data.total}/>
+            <CancelOrderButton className="cancel-order"/>
         </>
     )
 }

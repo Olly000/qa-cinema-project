@@ -48,13 +48,13 @@
     "ticketsAvailable": 40
   },
   {
-    "filmTitle": "Avatar",
+    "filmTitle": "Avatar The Way Of Water",
     "showtime": "2022-09-12T11:00",
     "screen": "Standard",
     "ticketsAvailable": 200
   },
   {
-    "filmTitle": "Avatar",
+    "filmTitle": "Avatar The Way Of Water",
     "showtime": "2022-09-14T18:00",
     "screen": "Deluxe",
     "ticketsAvailable": 40
@@ -94,5 +94,11 @@
     "showtime": "2022-09-13T14:00",
     "screen": "Deluxe",
     "ticketsAvailable": 40
+  },
+  {
+    "filmTitle": "",
+    "showtime": "2022-09-11T17:00",
+    "screen": "Standard",
+    "ticketsAvailable": 200
   }
 ]

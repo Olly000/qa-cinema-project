@@ -31,10 +31,8 @@ const BookingForm = () => {
 
     useEffect(() => {
         retrieveShowings(film);
-        console.log(film);
         setDisableShowing(false);
     }, [film]);
-
 
 
     const tempTickets = 6;
@@ -53,8 +51,6 @@ const BookingForm = () => {
         fetch(`${baseURL}/movies/showings/${input}`, {method: 'get'})
             .then(r => r.json()
             .then(body => {
-                console.log(input);
-                console.log(body);
                 setShowingsForFilm(body.map(entry => {return (`${entry.time} in the  ${entry.screen} screen`)}))}))
             .catch(err => console.log(err));
     }
@@ -93,7 +89,7 @@ const handleSubmit = () => {
     navigate('/payment', {
         state: {
             film: film, showing: showing, adults: adults,
-            children: children, concession: concession, ticketNumber: ticketNumber
+            children: children, concession: concession, total: total, ticketNumber: ticketNumber
         }
     });
 }

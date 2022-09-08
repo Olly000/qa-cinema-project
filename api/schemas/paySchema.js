@@ -10,6 +10,17 @@ const paySchema = new Schema({
     expiry: String
 })
 
+const paymentSchema = new Schema({
+    cardName: String,
+    children: Number,
+    adults: Number,
+    concession: Number,
+    film: String,
+    showing: String
+})
+
+const transaction = new mongoose.model("transactions", paymentSchema);
+
 const paymentDetails = mongoose.model("PaymentDetails", paySchema);
 
-module.exports = paymentDetails;
+module.exports = {transaction, paymentDetails};
