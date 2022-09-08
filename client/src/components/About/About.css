@@ -1,5 +1,16 @@
+.AboutBackground {
+    background-color: aqua;
+    color: white;
+}
 
+.h2 {
+    color:white;
+}
 
+.img-container{
+    width: 200px;
+    height: 120px;
+}
 td, tr, th, thead, tbody {
     padding: 10px;
 }

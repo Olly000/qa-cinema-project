@@ -1,88 +1,119 @@
-import React from 'react';
+import React from 'react'
 import { Container, Table, Button } from 'reactstrap';
-import styles from './About.css';
+import './About.css';
+import leon from './img/Leon.jpg'
+import kester from './img/kester.jpg'
+import brendon from './img/brendon.jpg'
+import olly from './img/olly.jpg'
 
-const About = () => {
-    document.title = "About"
-
+function About() {
     return (
-        <div className="centeredContent">
-            <div className="container">
+        <div className='centeredContent AboutBackground'>
+            <div className='container'>
+                <h2>About Us</h2>
+                <p>We are a team of software developers who worked on this project together to add to our portfolios.</p>
                 <div className="columnGapContainer">
-                    <h2>About Us</h2>
-                    <h3> Get to know the team</h3>
-                    <p>
-                        Known as Team Luck, we worked together on this project to create QA Cinema!
-                        <br />
-                        We split up tasks amongst ourselves and we have created this website as a group.
-                    </p>
-                    <div className="centeredContent">
-                        <Table>
-                            <thead align="center">
-                                <tr >
-                                    <th></th>
-                                    <th>First Name</th>
-                                    <th>Last Name</th>
-                                    <th>Email</th>
-                                    <th>Github</th>
-                                </tr>
-                            </thead>
-                            <tbody align="center">
-                                <tr >
-                                    <th scope="row">1</th>
-                                    <td>Muhamed</td>
-                                    <td>Jakupovic</td>
-                                    <td>Mjakupovic@qa.com</td>
-                                    <td><a id="gitlink" href="https://github.com/Muhamed-Jakupovic7" target="_blank" rel="noreferrer">github.com/Muhamed-Jakupovic7</a></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Brendon</td>
-                                    <td>Whitfield</td>
-                                    <td>Bwhitfield@qa.com</td>
-                                    <td><a id="gitlink" href="https://github.com/brendonwhitfield" target="_blank" rel="noreferrer">github.com/brendonwhitfield</a></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td>Muhammed</td>
-                                    <td>Rahman</td>
-                                    <td>Mrahman@qa.com</td>
-                                    <td><a id="gitlink" href="" target="_blank" rel="noreferrer"></a></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">4</th>
-                                    <td>Oliver</td>
-                                    <td>Stockman</td>
-                                    <td>Ostockman@qa.com</td>
-                                    <td><a id="gitlink" href="https://github.com/Olly000" target="_blank" rel="noreferrer">github.com/Olly000</a></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">5</th>
-                                    <td>Leon</td>
-                                    <td>Camron</td>
-                                    <td>Lcamron@qa.com</td>
-                                    <td><a id="gitlink" href="" target="_blank" rel="noreferrer"></a></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">5</th>
-                                    <td>Kester</td>
-                                    <td>Jones</td>
-                                    <td>Kjones@qa.com</td>
-                                    <td><a id="gitlink" href="https://github.com/Lucksray" target="_blank" rel="noreferrer">github.com/Lucksray</a></td>
-                                </tr>
-                            </tbody>
-                        </Table>
-                    </div>
-                    <br />
-                    <div align="center">
+                    <div className="venueContainer">
+                        <div className=" centeredContent img-container">
+                            <a href="https://github.com/KesterJJ" target="_blank" rel="noreferrer">
+                                Kester Jones
+                            </a>
+                        </div>
+                        <div>
+                        <img className='kester img' src={kester} alt="/" />
+                        </div>
+                        <div className="description-container">
+                            <p> Based in London, Kester is full-stack developer who enjoys writing in his spare time.</p>
+                        </div>
+                </div>
+                <div className="columnGapContainer">
+                    <div className="venueContainer">
+                        <div className="centeredContent img-container">
+                            <a href="https://github.com/Lucksray" target="_blank" rel="noreferrer">
+                                Leon Cameron
+                            </a>
+                        </div>
+                        <div>
+                        <img className='leon img' src={leon} alt="/" />
+                        </div>
+                        <div className="description-container">
+                            <p>Based in London, Leon is a full-stack developer who enjoys building and playing games on pc.</p>
+                        </div>
+                </div>
+                <div className="columnGapContainer">
+                    <div className="venueContainer">
+                        <div className="centeredContent img-container">
+                            <a href="https://github.com/Olly000" target="_blank" rel="noreferrer">
+                                Olly Stockman
+                            </a>
+                        </div>
+                        <div>
+                        <img className='olly img' src={olly} alt="/" />
+                        </div>
+                        <div className="description-container">
+                            <p>Based in Scotland, Olly is full-stack developer who enjoys producing music.</p>
+                        </div>
+                </div>
+                <div className="columnGapContainer">
+                    <div className="venueContainer">
+                        <div className="centeredContent img-container">
+                            <a href="https://github.com/BrendonWhitfield" target="_blank" rel="noreferrer">
+                                Brendon Whitfield
+                            </a>
+                        </div>
+                        <div>
+                        <img className='brendon img' src={brendon} alt="/" />
+                        </div>
+                        <div className="description-container">
+                            <p>Based in London, Brendon is a full-stack developer who enjoys many different sports.</p>
+                        </div>
+                </div>
+                <div className="columnGapContainer">
+                    <div className="venueContainer">
+                        <div className="img-container">
+                            <a href="https://github.com/Muhamed-jakupovic7" target="_blank" rel="noreferrer">
+                                Muhamed Jakupovic
+                            </a>
+                        </div>
+                        <div>
+                        <img className='olly img' src={olly} alt="/" />
+                        </div>
+                        <div className="description-container">
+                            <p>Based in Scotland, Olly is full-stack developer who enjoys producing music.</p>
+                        </div>
+                </div>
+                <div className="columnGapContainer">
+                    <div className="venueContainer">
+                        <div className="img-container">
+                            <a href="https://github.com" target="_blank" rel="noreferrer">
+                                Muhammed Rahmen
+                            </a>
+                        </div>
+                        <div>
+                        <img className='naym img' src={olly} alt="/" />
+                        </div>
+                        <div className="description-container">
+                            <p>Based in Scotland, Olly is full-stack developer who enjoys producing music.</p>
+                        </div>
+                </div>
+                </div>
+
+                </div>
+                <div align="center">
                         <Button id="infoButton" href="http://localhost:3000/contact" type="button">
                             If you wish to contact the team, please click here
                         </Button>
                     </div>
-                </div>
-            </div>
         </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        
+
     );
+
 }
 
-export default About;
+export default About
