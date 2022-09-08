@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require('cors');
 const app = express();
 // This is a public sample test API key.
 // Don’t submit any personally identifiable information in requests made with this key.
@@ -7,6 +8,7 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 app.use(express.static("public"));
 app.use(express.json());
+app.use(cors);
 
 const prices = {
     adult: 10,

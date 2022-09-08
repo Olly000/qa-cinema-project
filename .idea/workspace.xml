@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c9c7a657-d3ee-455e-8d5d-97fa36a879e9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/routes/movies.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/routes/movies.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Booking/BookingForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Booking/BookingForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/PaymentPage/StripePayment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/PaymentPage/StripePayment.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

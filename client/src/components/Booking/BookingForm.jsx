@@ -55,7 +55,7 @@ const BookingForm = () => {
             .then(body => {
                 console.log(input);
                 console.log(body);
-                setShowingsForFilm(body.map(entry => {return (`${entry.showtime} - ${entry.screen}`)}))}))
+                setShowingsForFilm(body.map(entry => {return (`${entry.time} in the  ${entry.screen} screen`)}))}))
             .catch(err => console.log(err));
     }
 
@@ -87,7 +87,7 @@ const BookingForm = () => {
 
 
 const handleSubmit = () => {
-    // fetch(`${baseURL}/updateTicketsLeft/:${ticketNumber}`)  // TODO: pass state without this fucking up
+    // fetch(`${baseURL}/updateTicketsLeft/:${ticketNumber}`)
     //     .then((response) => console.log(response.status));
 
     navigate('/payment', {

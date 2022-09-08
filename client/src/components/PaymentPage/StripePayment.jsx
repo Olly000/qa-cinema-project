@@ -11,7 +11,7 @@ import "./payments.css";
 console.log(process.env.STRIPE_PUBLIC_KEY);
 const stripePromise = loadStripe(`${process.env.STRIPE_PUBLIC_KEY}`);
 
-const baseURL = 'http://localhost:4494/';
+const baseURL = 'http://localhost:4242';
 
 export default function StripePayment({adults, children, concession}) {
     const [clientSecret, setClientSecret] = useState("");
