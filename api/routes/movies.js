@@ -78,9 +78,7 @@ router.get('/movieTitles', (req, res) => {
 
 router.get('/showings/:film', (req, res) => {
     showing.find({filmTitle: {$eq: req.params.film}}).then((shows) => {
-        let showList = [];
-
-        res.send(shows.map(entry => showList.push(entry.showtime, entry.screen)));
+        res.send(shows.map(entry => {return ({time: entry.showtime, screen: entry.screen})}));
     })
 })
 

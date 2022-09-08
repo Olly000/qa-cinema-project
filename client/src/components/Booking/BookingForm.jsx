@@ -10,7 +10,7 @@ const BookingForm = () => {
 
     const [movies, setMovies] = useState([]);
     const [showingsForFilm, setShowingsForFilm] = useState([]);
-    const [film, setFilm] = useState('');
+    const [film, setFilm] = useState('testinitial');
     const [showing, setShowing] = useState('');
     const [adults, setAdults] = useState(0);
     const [children, setChildren] = useState(0);
@@ -22,8 +22,18 @@ const BookingForm = () => {
     const baseURL = `http://localhost:4494`;
 
     useEffect(() => {
+        if(movies.length === 0) {
         retrieveFilms();
+        }
+        // if(film !== 'testinitial' && showingsForFilm !== []) {
+
     });
+
+    useEffect(() => {
+        retrieveShowings(film);
+        console.log(film);
+        setDisableShowing(false);
+    }, [film]);
 
 
 
@@ -39,18 +49,19 @@ const BookingForm = () => {
     let total = (adults * prices.adult) + (children * prices.child) + (concession * prices.concession);
 
 
-    const retrieveShowings = () => {
-        fetch(`${baseURL}/movies/showings/${film}`, {method: 'get'})
-            .then(res => res.json())
-            .then(res => setShowingsForFilm(res))
+    const retrieveShowings = (input) => {
+        fetch(`${baseURL}/movies/showings/${input}`, {method: 'get'})
+            .then(r => r.json()
+            .then(body => {
+                console.log(input);
+                console.log(body);
+                setShowingsForFilm(body.map(entry => {return (`${entry.showtime} - ${entry.screen}`)}))}))
             .catch(err => console.log(err));
     }
 
     const selectFilm = (input) => {
+        console.log(input);
         setFilm(input);
-        retrieveShowings();
-        console.log(showingsForFilm);
-        setDisableShowing(false);
     }
 
     const checkAvailable = () => {
@@ -73,7 +84,6 @@ const BookingForm = () => {
             .then(res => setMovies(res))
             .catch(err => console.log(err));
     }
-    console.log('result of movies get: ', movies);
 
 
 const handleSubmit = () => {
@@ -114,7 +124,7 @@ return (
                                                                                  onChange={input => setConcession(Number(input.target.value))}/>
             <button onClick={handleSubmit} id="buy-button" className="in-fields"> Buy Tickets</button>
         </fieldset>
-        <div>{checkAvailable()}</div>
+        {/*<div>{checkAvailable()}</div>*/}
         <div className="total">
             Total cost is: £{total}
         </div>
