@@ -41,7 +41,7 @@ const CommentForm = ({ handleCreatePost }) => {
         fetch(`/discussionBoardApi`).then((
             response) => console.log(response.status));
 */
-        axios.post('http://localhost:27017/DiscussionBoard', {body}).then(res => res.json()).then(data => console.log(data));
+        axios.post('http://localhost:27017/cinema_db/discussionboards', {body}).then(res => res.json()).then(data => console.log(data));
     };
 
 }
@@ -75,7 +75,7 @@ return (
             <FormGroup row>
                 <Label for="Comment">Comments</Label>
                 <Col>
-                    <Input placeholder="enter text here" type="text" name="Comment" id="Comment" value={Comment} onChange={(e) => setComment(e.target.value)} />
+                    <textArea placeholder="enter text here" name="Comment" id="Comment" rows="12" cols="36" value={Comment} onChange={(e) => setComment(e.target.value)} />
                 </Col>
             </FormGroup>
 

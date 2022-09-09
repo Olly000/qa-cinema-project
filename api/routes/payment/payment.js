@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const mongoose = require('mongoose');
 
-mongoose.connect("mongodb://localhost:27017/payment").then(() => {
+mongoose.connect("mongodb://localhost:27017/cinema_db").then(() => {
     console.log("Payment Connected");
 }).catch(console.log);
 
@@ -17,7 +17,7 @@ const paymentSchema = mongoose.schema({
 const paymentModel = new mongoose.model("payments", paymentSchema);
 
 router.post("/payment", (req, res) => {
-    paymentModel.create({req}).then(() => {
+    paymentModel.create(req.body).then(() => {
         res.send(JSON.stringify());
     }).catch((err) => {
         throw err;

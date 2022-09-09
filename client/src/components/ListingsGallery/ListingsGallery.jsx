@@ -34,7 +34,7 @@ const ListingsGallery = ({ upcoming, current }) => {
                 if (movie.title.toLowerCase().includes(searchTerm.toLowerCase()) && movieDate > today) {
                     console.log("Upcoming");
                     return <Movie key={movie.title} title={movie.title} actors={movie.actors.toString()}
-                        director={movie.director} screen="1" />
+                        director={movie.director} screen="1" releaseDate={movieDate} />
                 }
             })
         } else if (current == true) {
@@ -45,16 +45,18 @@ const ListingsGallery = ({ upcoming, current }) => {
                 if (movie.title.toLowerCase().includes(searchTerm.toLowerCase()) && movieDate < today) {
                     console.log("Current");
                     return <Movie key={movie.title} title={movie.title} actors={movie.actors.toString()}
-                        director={movie.director} screen="1" />
+                        director={movie.director} screen="1" releaseDate={movieDate} />
                 }
             })
         } else {
             console.log("else");
             return movies.map((movie) => {
+                let substr = movie.releaseDate.substring(0, 10);
+                let movieDate = new Date(substr);
                 if (movie.title.toLowerCase().includes(searchTerm.toLowerCase())) {
                     console.log("Both");
                     return <Movie key={movie.title} title={movie.title} actors={movie.actors.toString()}
-                        director={movie.director} screen="1" />
+                        director={movie.director} screen="1" releaseDate={movieDate} />
                     
                 }
             })
