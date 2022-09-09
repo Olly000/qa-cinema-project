@@ -8,8 +8,8 @@ const cors = require('cors');
 const indexRouter = require('./routes/index');
 const moviesRouter = require('./routes/movies');
 const testAPIRouter = require("./routes/testAPI");
-const discussionRouter = require("./routes/discussion/DiscussionBoardApi");
-// const payRouter = require("./routes/payment/saveDetails")
+const payRouter = require("./routes/payment/saveDetails")
+const discussionRouter = require('./routes/discussion/DiscussionBoardApi')
 const app = express();
 
 
@@ -31,7 +31,7 @@ app.use('/', indexRouter);
 app.use('/movies', moviesRouter);
 app.use("/testAPI", testAPIRouter);
 
-// app.use('/payment', payRouter); //TODO: work out why this doesn't work
+app.use('/saveDetails', payRouter); //TODO: work out why this doesn't work
 
 app.use('/discussionBoard', discussionRouter);
 

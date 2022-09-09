@@ -5,8 +5,7 @@ const paySchema = new Schema({
     userName: {type:String,
                 unique: true},
     cardName: String,
-    cardNum: {type:Number,
-                unique: true},
+    cardNum: Number,
     expiry: String
 })
 
@@ -22,5 +21,7 @@ const paymentSchema = new Schema({
 const transaction = new mongoose.model("transactions", paymentSchema);
 
 const paymentDetails = new mongoose.model("PaymentDetails", paySchema);
+
+transaction.find().then(res => console.log(res));
 
 module.exports = {transaction, paymentDetails};

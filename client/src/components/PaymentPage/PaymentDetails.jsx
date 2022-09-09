@@ -1,8 +1,10 @@
 import './payments.css';
 import {useState} from "react";
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router';
 
 
-const PaymentDetails = () => {
+const PaymentDetails = ({ children, adults, concession, film, showing}) => {
 
     const [userName, setUserName] = useState('');
     const [cardNum, setCardNum] = useState('');
@@ -11,7 +13,9 @@ const PaymentDetails = () => {
     const [cvc, setCvc] = useState('');
     const [isChecked, setIsChecked] = useState(false);
 
-    const baseURL = 'http://localhost:4494';
+    const navigate = useNavigate();
+
+    const baseURL = 'http://localhost:4494/saveDetails';
 
     //TODO: this method should card details when user submits with the save details button pressed but just 404s with any combination of url i can think of ????
     const savePaymentDetails = () => {
@@ -34,8 +38,19 @@ const PaymentDetails = () => {
     const confirmPayment = () => {
         //TODO: as stripe doesn't work this is meant to send to Leon's payment api then return the confirmation page
         // (added to the saveDetails api file but not refactored yet)
-
-
+            fetch(`${baseURL}/confirm`).then(response =>{
+                if (response.ok){
+                    console.log(response)
+                     
+                    navigate('/paymentConfirmed', {
+                        state: {
+                            cardName: cardName, children : children, adults: adults, concession:concession,
+                            film: film, showing: showing
+                        }
+                    })
+                }
+                throw response;
+            }).catch(err => console.log(err));
     }
 
     const handleSubmit = (event) => {
