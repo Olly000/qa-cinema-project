@@ -13,7 +13,7 @@ const DiscussionBoard = () => {
     }, []);
 
     const getComments = () => {
-        fetch("http://localhost:9000/discussionBoard/get", { method: 'get'})
+        fetch("http://localhost:4494/discussionBoard/get", { method: 'get'})
         .then(res => res.json())
         .then(res => setComments(res))
         .catch(err => console.log(err));

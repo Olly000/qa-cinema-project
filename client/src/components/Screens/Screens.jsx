@@ -1,5 +1,4 @@
 import Carousel from './Carousel';
-import styles from './Screens.css';
 
 const Screens = () => {
     
