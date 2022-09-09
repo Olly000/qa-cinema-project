@@ -14,7 +14,7 @@ function About() {
                 <p>We are a team of software developers who worked on this project together to add to our portfolios.</p>
                 <div className="columnGapContainer">
                     <div className="venueContainer">
-                        <div className=" centeredContent img-container">
+                        <div className=" centeredContent imgContainer">
                             <a href="https://github.com/KesterJJ" target="_blank" rel="noreferrer">
                                 Kester Jones
                             </a>
@@ -28,7 +28,7 @@ function About() {
                 </div>
                 <div className="columnGapContainer">
                     <div className="venueContainer">
-                        <div className="centeredContent img-container">
+                        <div className="centeredContent imgContainer">
                             <a href="https://github.com/Lucksray" target="_blank" rel="noreferrer">
                                 Leon Cameron
                             </a>
@@ -42,7 +42,7 @@ function About() {
                 </div>
                 <div className="columnGapContainer">
                     <div className="venueContainer">
-                        <div className="centeredContent img-container">
+                        <div className="centeredContent imgContainer">
                             <a href="https://github.com/Olly000" target="_blank" rel="noreferrer">
                                 Olly Stockman
                             </a>
@@ -56,7 +56,7 @@ function About() {
                 </div>
                 <div className="columnGapContainer">
                     <div className="venueContainer">
-                        <div className="centeredContent img-container">
+                        <div className="centeredContent imgContainer">
                             <a href="https://github.com/BrendonWhitfield" target="_blank" rel="noreferrer">
                                 Brendon Whitfield
                             </a>
