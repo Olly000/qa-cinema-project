@@ -8,6 +8,7 @@ const cors = require('cors');
 const indexRouter = require('./routes/index');
 const moviesRouter = require('./routes/movies');
 const testAPIRouter = require("./routes/testAPI");
+// const payRouter = require("./routes/payment/saveDetails")
 const app = express();
 
 
@@ -28,6 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/movies', moviesRouter);
 app.use("/testAPI", testAPIRouter);
+// app.use('/payment', payRouter); //TODO: work out why this doesn't work
 
 
 // catch 404 and forward to error handler

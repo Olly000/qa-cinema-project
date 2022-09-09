@@ -3,13 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c9c7a657-d3ee-455e-8d5d-97fa36a879e9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/Data/ShowingData.json" beforeDir="false" afterPath="$PROJECT_DIR$/api/Data/ShowingData.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/routes/payment/payment.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/routes/payment/payment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/routes/payment/saveDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/routes/payment/saveDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/schemas/paySchema.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/schemas/paySchema.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Booking/BookingForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Booking/BookingForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/PaymentPage/Payment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/PaymentPage/Payment.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/PaymentPage/PaymentDetails.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/PaymentPage/PaymentDetails.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +83,7 @@
       <workItem from="1662537664120" duration="2414000" />
       <workItem from="1662572092686" duration="2441000" />
       <workItem from="1662624019100" duration="9713000" />
+      <workItem from="1662711257355" duration="2819000" />
     </task>
     <servers />
   </component>
