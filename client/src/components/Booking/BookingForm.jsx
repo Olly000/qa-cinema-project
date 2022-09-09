@@ -105,7 +105,7 @@ return (
             <label> Choose Showing</label>
             <ShowingInput data={['--select showing--', ...showingsForFilm]} name="showing" disabled={disableShowing}
                           onChange={input => setShowing(input.target.value)}/>
-
+ 
             <label htmlFor="ad-tix">Number of Adult Tickets: </label><input type="text" className="in-fields"
                                                                             name="ad-tix" size="2"
                                                                             placeholder="0"

@@ -14,7 +14,7 @@ const Payment = () => {
     return (<>
             <h2> Make a payment</h2>
             <PaymentInfo film={data.film} showing={data.showing} adults={data.adults} children={data.children} concession={data.children} total={data.total} />
-            <PaymentDetails total={data.total}/>
+            <PaymentDetails film={data.film} showing={data.showing} adults={data.adults} children={data.children} concession={data.children} total={data.total} />
             {/*<StripePayment adults={data.adults} children={data.children} concession={data.children}/>*/}
             <CancelOrderButton className="cancel-order"/>
         </>

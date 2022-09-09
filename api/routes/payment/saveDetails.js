@@ -4,9 +4,11 @@ const router = express.Router();
 const mongoose = require('mongoose');
 const pay = require('../../schemas/paySchema.js');
 
+pay.transaction.find().then(res => console.log(res))
 
 router.post('/receiveDetails', (req, res) => {
-    pay.paymentDetails.findOne(req.body.userName).then((result) => {
+
+    pay.paymentDetails.findOne({"userName":{$eq:req.body.userName}}).then((result) => {
         console.log(result);
         if(!result) {
             const newUser = new pay.paymentDetails(req.body);
@@ -19,14 +21,14 @@ router.post('/receiveDetails', (req, res) => {
 
 
 
-router.post("/payment", (req, res) => {
-    pay.transaction.create({req}).then(() => {
+router.post("/", (req, res) => {
+    pay.transaction.create(req.body).then(() => {
         res.send(JSON.stringify());
     }).catch((err) => {
         throw err;
     })
 })
-router.get("/payment/confirm", (req, res) => {
+router.get("/confirm", (req, res) => {
     pay.transaction.find({}).then((paymentSchema) => {
         res.send(JSON.stringify(paymentSchema));
     }).catch((err) => {
@@ -34,4 +36,4 @@ router.get("/payment/confirm", (req, res) => {
     })
 })
 
-module.export = router;
+module.exports = router;
