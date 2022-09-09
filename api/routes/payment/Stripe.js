@@ -1,12 +1,12 @@
 const express = require("express");
+const cors = require('cors');
 const app = express();
-// This is a public sample test API key.
-// Don’t submit any personally identifiable information in requests made with this key.
-// Sign in to see your own test API key embedded in code samples.
+
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 app.use(express.static("public"));
 app.use(express.json());
+app.use(cors({origin: ['https://checkout.stripe.com', 'localhost:3000/payment', 'http://localhost:4242/create-payment-intent']}));
 
 const prices = {
     adult: 10,
@@ -22,16 +22,17 @@ const calculateOrderAmount = (items) => {
 // This is the API for the stripe system
 app.post("/create-payment-intent", async (req, res) => {
     const { items } = req.body;
-
+    res.setHeader('Content-Type', 'application/json');
+    let total = calculateOrderAmount(items);
+    console.log(res.headers);
     // Create a PaymentIntent with the order amount and currency
     const paymentIntent = await stripe.paymentIntents.create({
-        amount: calculateOrderAmount(items),
+        amount: `${total}`,
         currency: "gbp",
         automatic_payment_methods: {
             enabled: true,
         },
     });
-
     res.send({
         clientSecret: paymentIntent.client_secret,
     });

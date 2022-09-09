@@ -11,8 +11,12 @@ import Home from './components/Home/Home';
 import Contact from './components/Contact/ContactPage';
 import GettingThere from './components/GettingThere/GettingThere';
 import ListingsNav from './components/ListingsGallery/sub-components/ListingsNav';
+
+import BookingPage from "./components/Booking/BookingPage";
+import Payment from "./components/PaymentPage/Payment";
+
 import DiscussionBoard from './components/discussionBoard/discussionBoard';
-import BookingPage from './components/Booking/BookingPage';
+
 
 
 
@@ -34,8 +38,12 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path='/openingTimes' element={<Home />} />
         <Route path='/gettingThere' element={<GettingThere />} />
+
+          <Route path='/booking' element={<BookingPage/>} />
+          <Route path='/payment' element={<Payment/>} />
+      }
         <Route path='/discussion' element={<DiscussionBoard />} />
-        <Route path='/booking/:title' element={<BookingPage />} />
+      
       </Routes>
       <Footer />
     </>

@@ -10,7 +10,7 @@ const BookingForm = () => {
 
     const [movies, setMovies] = useState([]);
     const [showingsForFilm, setShowingsForFilm] = useState([]);
-    const [film, setFilm] = useState('');
+    const [film, setFilm] = useState('testinitial');
     const [showing, setShowing] = useState('');
     const [adults, setAdults] = useState(0);
     const [children, setChildren] = useState(0);
@@ -22,12 +22,19 @@ const BookingForm = () => {
     const baseURL = `http://localhost:4494`;
 
     useEffect(() => {
+        if(movies.length === 0) {
         retrieveFilms();
-    }, []);
+        }
+        // if(film !== 'testinitial' && showingsForFilm !== []) {
 
-    // these just here until backend is made and RetrieveFilms can supply the film name array
-    const tempFilmList = ['Nope', 'Toy Story', 'Batman', 'Dune'];
-    const tempShowingList = ['Friday 10 September, 14.00', 'Friday 10 September, 17.00', 'Saturday 11 September, 15.00'];
+    });
+
+    useEffect(() => {
+        retrieveShowings(film);
+        setDisableShowing(false);
+    }, [film]);
+
+
     const tempTickets = 6;
 
     let ticketNumber = adults + children + concession;
@@ -40,18 +47,17 @@ const BookingForm = () => {
     let total = (adults * prices.adult) + (children * prices.child) + (concession * prices.concession);
 
 
-
-    const retrieveShowings = () => {
-        fetch(`${baseURL}/movies/showings:${film}`, {method: 'get'})
-            .then(res => res.json())
-            .then(res => setShowingsForFilm(res))
+    const retrieveShowings = (input) => {
+        fetch(`${baseURL}/movies/showings/${input}`, {method: 'get'})
+            .then(r => r.json()
+            .then(body => {
+                setShowingsForFilm(body.map(entry => {return (`${entry.time} in the  ${entry.screen} screen`)}))}))
             .catch(err => console.log(err));
     }
 
     const selectFilm = (input) => {
+        console.log(input);
         setFilm(input);
-        retrieveShowings();
-        setDisableShowing(false);
     }
 
     const checkAvailable = () => {
@@ -74,17 +80,16 @@ const BookingForm = () => {
             .then(res => setMovies(res))
             .catch(err => console.log(err));
     }
-    console.log('result of movies get: ', movies);
 
 
 const handleSubmit = () => {
-    fetch(`${baseURL}/updateTicketsLeft/:${ticketNumber}`)  // TODO: pass state without this fucking up
-        .then((response) => console.log(response.status));
+    // fetch(`${baseURL}/updateTicketsLeft/:${ticketNumber}`)
+    //     .then((response) => console.log(response.status));
 
     navigate('/payment', {
         state: {
             film: film, showing: showing, adults: adults,
-            children: children, concession: concession, ticketNumber: ticketNumber
+            children: children, concession: concession, total: total, ticketNumber: ticketNumber
         }
     });
 }
@@ -98,7 +103,7 @@ return (
                        onChange={input => selectFilm(input.target.value)}/>
 
             <label> Choose Showing</label>
-            <ShowingInput data={['--select showing--', ...tempShowingList]} name="showing" disabled={disableShowing}
+            <ShowingInput data={['--select showing--', ...showingsForFilm]} name="showing" disabled={disableShowing}
                           onChange={input => setShowing(input.target.value)}/>
 
             <label htmlFor="ad-tix">Number of Adult Tickets: </label><input type="text" className="in-fields"
@@ -115,7 +120,7 @@ return (
                                                                                  onChange={input => setConcession(Number(input.target.value))}/>
             <button onClick={handleSubmit} id="buy-button" className="in-fields"> Buy Tickets</button>
         </fieldset>
-        <div>{checkAvailable()}</div>
+        {/*<div>{checkAvailable()}</div>*/}
         <div className="total">
             Total cost is: £{total}
         </div>

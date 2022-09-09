@@ -5,7 +5,7 @@ mongoose.connect("mongodb://localhost:27017/cinema_db").then(() => {
     console.log("Payment Connected");
 }).catch(console.log);
 
-const paymentSchema = mongoose.Schema({
+const paymentSchema = mongoose.schema({
     cardName: String,
     children: Number,
     adults: Number,

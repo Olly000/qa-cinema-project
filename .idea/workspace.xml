@@ -4,7 +4,7 @@
     <list default="true" id="c9c7a657-d3ee-455e-8d5d-97fa36a879e9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/routes/discussion/DiscussionBoardApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/routes/discussion/DiscussionBoardApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/schemas/paySchema.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/schemas/paySchema.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +81,9 @@
       <workItem from="1662416080968" duration="134000" />
       <workItem from="1662451439327" duration="29290000" />
       <workItem from="1662537664120" duration="2414000" />
+      <workItem from="1662572092686" duration="2441000" />
+      <workItem from="1662624019100" duration="9713000" />
+      <workItem from="1662711257355" duration="2819000" />
     </task>
     <servers />
   </component>
