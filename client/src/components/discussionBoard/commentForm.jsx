@@ -36,12 +36,21 @@ const CommentForm = ({ handleCreatePost }) => {
         setComment("");
         handleCreatePost();
 
-        let body = {name,postTitle,filmName,rating,comment}
-/*
-        fetch(`/discussionBoardApi`).then((
-            response) => console.log(response.status));
-*/
-        axios.post('http://localhost:27017/cinema_db/discussionboards', {body}).then(res => res.json()).then(data => console.log(data));
+        fetch(`http://localhost:4494/discussionBoard/post`, {
+            method: 'post',
+            headers: {'Content-Type':'application/json'},
+            body: JSON.stringify({
+              name: `${name}`,
+              postTitle: `${postTitle}`,
+              filmTitle: `${filmName}`,
+              rating: `${rating}`,
+              comment: `${comment}`
+            })
+        }).then((
+            response) => console.log(response.status))
+            .catch(err => console.log(err));
+
+    //     axios.post('http://localhost:27017/cinema_db/discussionboards', {body}).then(res => res.json()).then(data => console.log(data));
     };
 
 }
@@ -75,17 +84,15 @@ return (
             <FormGroup row>
                 <Label for="Comment">Comments</Label>
                 <Col>
-                    <textArea placeholder="enter text here" name="Comment" id="Comment" rows="12" cols="36" value={Comment} onChange={(e) => setComment(e.target.value)} />
+                    <textarea placeholder="enter text here" name="Comment" id="Comment" rows="12" cols="36" onChange={(e) => setComment(e.target.value)} />
                 </Col>
             </FormGroup>
 
-            <Button>Submit</Button>
+            <button onClick={handleSubmit}>Submit</button>
             </Form>
 
         </>
         )
-
-
 }
 
 export default CommentForm;
