@@ -17,6 +17,7 @@ import BookingPage from "./components/Booking/BookingPage";
 import Payment from "./components/PaymentPage/Payment";
 
 import DiscussionBoard from './components/discussionBoard/discussionBoard';
+import OpeningTimes from "./components/OpeningTimes/OpeningTimes";
 
 
 
@@ -37,7 +38,7 @@ function App() {
         </Route>
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
-        <Route path='/openingTimes' element={<Home />} />
+        <Route path='/openingTimes' element={<OpeningTimes />} />
         <Route path='/gettingThere' element={<GettingThere />} />
         <Route path='/booking/*' element={<BookingPage/>} />
         <Route path='/payment' element={<Payment/>} />
