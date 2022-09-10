@@ -1,5 +1,5 @@
-const {DiscussionSchema} = require("./API/schemas/discussionSchema.js");
-const {MovieSchema} = require("./api/schemas/movieSchema.js")
+const {DiscussionSchema} = require("../schemas/discussionSchema.js");
+const {MovieSchema} = require("../schemas/movieSchema.js")
 
 const mongoose = require("mongoose");
 
