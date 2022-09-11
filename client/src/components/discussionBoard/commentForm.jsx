@@ -9,49 +9,56 @@ const CommentForm = ({ handleCreatePost }) => {
     const [rating, setRating] = useState("");
     const [comment, setComment] = useState("");
 
-    const correctInput = () => {
+    const correctInput = (e) => {
 
-        if (name === "" || postTitle.length <= 0 || comment.length <= 0) {
+        if (name.length <= 0 || postTitle.length <= 0 || comment.length <= 0) {
             alert("Please fill in required fields.");
+            e.preventDefault();
             return false;
         }
         return true;
     }
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-    if(correctInput()){
-        const userInput = {
-            "name": name,
-            "postTitle": postTitle,
-            "filmName": filmName,
-            "rating": rating,
-            "comment": comment
-        };
+    function handleSubmit(e) {
 
-        setName("Anonymous");
-        setPostTitle("");
-        setFilmName("");
-        setRating("");
-        setComment("");
-        handleCreatePost();
+        if(correctInput(e)){
+            const userInput = {
+                "name": name,
+                "postTitle": postTitle,
+                "filmName": filmName,
+                "rating": rating,
+                "comment": comment
+            };
+
+            setName("Anonymous");
+            setPostTitle("");
+            setFilmName("");
+            setRating(0);
+            setComment("");
+            handleCreatePost(userInput);
+
+
+
+
+        //     axios.post('http://localhost:27017/cinema_db/discussionboards', {body}).then(res => res.json()).then(data => console.log(data));
+    };
+
+    function handleCreatePost (input) {
 
         fetch(`http://localhost:4494/discussionBoard/post`, {
             method: 'post',
             headers: {'Content-Type':'application/json'},
             body: JSON.stringify({
-              name: `${name}`,
-              postTitle: `${postTitle}`,
-              filmTitle: `${filmName}`,
-              rating: `${rating}`,
-              comment: `${comment}`
+                name: `${name}`,
+                postTitle: `${postTitle}`,
+                filmTitle: `${filmName}`,
+                rating: `${rating}`,
+                comment: `${comment}`
             })
-        }).then((
-            response) => console.log(response.status))
-            .catch(err => console.log(err));
-
-    //     axios.post('http://localhost:27017/cinema_db/discussionboards', {body}).then(res => res.json()).then(data => console.log(data));
-    };
+        })
+        .then((response) => console.log(response.status))
+        .catch(err => console.log(err));
+    }
 
 }
 return (
@@ -84,7 +91,7 @@ return (
             <FormGroup row>
                 <Label for="Comment">Comments</Label>
                 <Col>
-                    <textarea placeholder="enter text here" name="Comment" id="Comment" rows="12" cols="36" onChange={(e) => setComment(e.target.value)} />
+                    <textarea placeholder="enter text here" name="Comment" id="Comment" rows="12" cols="36" value={comment} onChange={(e) => setComment(e.target.value)} />
                 </Col>
             </FormGroup>
 

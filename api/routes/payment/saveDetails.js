@@ -4,7 +4,6 @@ const router = express.Router();
 const mongoose = require('mongoose');
 const pay = require('../../schemas/paySchema.js');
 
-pay.transaction.find().then(res => console.log(res))
 
 router.post('/receiveDetails', (req, res) => {
 
