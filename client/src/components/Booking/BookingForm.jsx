@@ -35,7 +35,7 @@ const BookingForm = () => {
     }, [film]);
 
 
-    const tempTickets = 6;
+    // const tempTickets = 6;
 
     let ticketNumber = adults + children + concession;
 

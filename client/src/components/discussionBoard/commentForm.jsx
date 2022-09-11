@@ -1,8 +1,10 @@
 import axios from "axios";
-import { useState } from "react";
+import {useEffect, useState} from "react";
 import { Col, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+// { handleCreatePost } - removed from line 6 props
 
-const CommentForm = ({ handleCreatePost }) => {
+const CommentForm = ({getComments}) => {
+
     const [name, setName] = useState("Anonymous");
     const [postTitle, setPostTitle] = useState("");
     const [filmName, setFilmName] = useState("");
@@ -10,10 +12,9 @@ const CommentForm = ({ handleCreatePost }) => {
     const [comment, setComment] = useState("");
 
     const correctInput = (e) => {
-
-        if (name.length <= 0 || postTitle.length <= 0 || comment.length <= 0) {
+        e.preventDefault();
+        if (name.length === 0 || postTitle.length === 0 || comment.length === 0) {
             alert("Please fill in required fields.");
-            e.preventDefault();
             return false;
         }
         return true;
@@ -56,14 +57,17 @@ const CommentForm = ({ handleCreatePost }) => {
                 comment: `${comment}`
             })
         })
-        .then((response) => console.log(response.status))
+        .then((response) => {
+            console.log(response.status)
+            getComments();
+        })
         .catch(err => console.log(err));
     }
-
+       // onSubmit={handleSubmit}- removed from line 65
 }
 return (
         <>
-        <Form className="comment-form" onSubmit={handleSubmit}>
+        <Form className="comment-form" >
             <FormGroup row>
                 <Label for="name" >Name</Label>
                 <Col>
