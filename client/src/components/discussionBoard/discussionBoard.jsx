@@ -24,8 +24,8 @@ const DiscussionBoard = () => {
             <h2>Discussion Board</h2>
             <div className='post_container'>
 
-              {  comments.map((post) => {
-                return (<> <Post name={post.name} postTitle={post.postTitle.toString()} filmTitle={post.filmTitle.toString()} rating={post.rating} comment={post.comment} />
+              {  comments.map((post, i) => {
+                return (<> <Post key={i} name={post.name} postTitle={post.postTitle.toString()} filmTitle={post.filmTitle.toString()} rating={post.rating} comment={post.comment} />
                 <br/><br/></>
                 )
             
@@ -34,7 +34,7 @@ const DiscussionBoard = () => {
 
             </div>
             <div>
-                <CommentForm />
+                <CommentForm getComments={getComments} />
             </div>
         </>
     )

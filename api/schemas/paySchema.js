@@ -22,6 +22,5 @@ const transaction = new mongoose.model("transactions", paymentSchema);
 
 const paymentDetails = new mongoose.model("PaymentDetails", paySchema);
 
-transaction.find().then(res => console.log(res));
 
 module.exports = {transaction, paymentDetails};

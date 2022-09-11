@@ -4,7 +4,11 @@
     <list default="true" id="c9c7a657-d3ee-455e-8d5d-97fa36a879e9" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/documentation/MnM Meeting Log.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+
+      <change beforePath="$PROJECT_DIR$/client/src/components/Booking/BookingForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Booking/BookingForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/discussionBoard/commentForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/discussionBoard/commentForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/discussionBoard/discussionBoard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/discussionBoard/discussionBoard.jsx" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,6 +110,7 @@
       <workItem from="1662572092686" duration="2441000" />
       <workItem from="1662624019100" duration="9713000" />
       <workItem from="1662711257355" duration="2819000" />
+      <workItem from="1662905765084" duration="6003000" />
     </task>
     <servers />
   </component>
