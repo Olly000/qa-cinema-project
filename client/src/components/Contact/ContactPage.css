@@ -1,0 +1,15 @@
+.ContactName {
+    background-color:aliceblue;
+}
+
+.ContactComment {
+    background-color: aliceblue;
+}
+
+.contact--address {
+    text-align: center;
+    font-size: 20px;
+    color: aliceblue;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

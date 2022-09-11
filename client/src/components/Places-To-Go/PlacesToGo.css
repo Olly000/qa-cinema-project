@@ -1,0 +1,7 @@
+.placesToGoBackground {
+    background-image: url('./img/background.jpg'), url('./img/background2.jpg');
+    background-position: top left, top right;
+    background-repeat: no-repeat, repeat;
+    background-size: 50%, 50%;
+
+}

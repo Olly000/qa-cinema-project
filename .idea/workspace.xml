@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c9c7a657-d3ee-455e-8d5d-97fa36a879e9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/documentation/MnM Meeting Log.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+
+      <change beforePath="$PROJECT_DIR$/client/src/components/Booking/BookingForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Booking/BookingForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/discussionBoard/commentForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/discussionBoard/commentForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/discussionBoard/discussionBoard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/discussionBoard/discussionBoard.jsx" afterDir="false" />
+
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2E7MJN5W2gy3J4lbtiQfLdb0T6s" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "js.linters.configure.manually.selectedeslint": "true",
+    "last_opened_file_path": "C:/Users/Olly/Documents/Jobs/QA/qa-cinema-project/documentation",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "nodejs.mocha.mocha_node_package_dir": "C:/Users/Olly/Documents/Jobs/QA/qa-cinema-project/api/node_modules/mocha",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "ts.external.directory.path": "C:\\Users\\Olly\\Documents\\Jobs\\QA\\qa-cinema-project\\client\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Olly\Documents\Jobs\QA\qa-cinema-project\documentation" />
+      <recent name="C:\Users\Olly\Documents\Jobs\QA\qa-cinema-project\client\src\components\Booking" />
+      <recent name="C:\Users\Olly\Documents\Jobs\QA\qa-cinema-project\client\src\components\PaymentPage" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Olly\Documents\Jobs\QA\qa-cinema-project\src\components\Booking" />
+      <recent name="C:\Users\Olly\Documents\Jobs\QA\qa-cinema-project\src\components\GettingThere" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Mocha.test Api responses">
+    <configuration name="final_project" type="NodeJSConfigurationType" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="test Api responses" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <mocha-package>$PROJECT_DIR$/api/node_modules/mocha</mocha-package>
+      <working-directory>$PROJECT_DIR$/api</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>SUITE</test-kind>
+      <test-file>$PROJECT_DIR$/api/test/testAPICall.js</test-file>
+      <test-names>
+        <name value="test Api responses" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Mocha.test Api responses" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c9c7a657-d3ee-455e-8d5d-97fa36a879e9" name="Changes" comment="" />
+      <created>1661942104864</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1661942104864</updated>
+      <workItem from="1661942109617" duration="23547000" />
+      <workItem from="1662017719028" duration="18567000" />
+      <workItem from="1662041392092" duration="6406000" />
+      <workItem from="1662106146147" duration="17871000" />
+      <workItem from="1662128896493" duration="41164000" />
+      <workItem from="1662377610440" duration="419000" />
+      <workItem from="1662378062598" duration="18207000" />
+      <workItem from="1662416080968" duration="134000" />
+      <workItem from="1662451439327" duration="29290000" />
+      <workItem from="1662537664120" duration="2414000" />
+      <workItem from="1662572092686" duration="2441000" />
+      <workItem from="1662624019100" duration="9713000" />
+      <workItem from="1662711257355" duration="2819000" />
+      <workItem from="1662905765084" duration="6003000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/qa_cinema_project$test_Api_responses_Home_Page.dat" NAME="test Api responses.Home Page Coverage Results" MODIFIED="1662828763653" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="MochaJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/qa_cinema_project$test_Api_responses.dat" NAME="test Api responses Coverage Results" MODIFIED="1662829103897" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="MochaJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>

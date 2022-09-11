@@ -1,0 +1,51 @@
+[
+    {
+        "title": "Samaritan",
+        "actors": ["Sylvester Stallone", " Javon Walton", " Pilou Asbæk", " Dascha Polanco"],
+        "director": "Julius Avery",
+        "image": "img/samaritan.jpg",
+        "releaseDate": "2022-8-26"
+    },{
+        "title":"Three Thousand Years of Longing",
+        "actors": ["Idris Elba", " Tilda Swinton", " Aamito Lagum", " Nicolas Mouawad"],
+        "director": "George Miller",
+        "image": "img/three_thousand_years_of_longing.jpg",
+        "releaseDate": "2022-9-2"
+    },{
+        "title": "The invitation",
+        "actors":  ["Nathalie Emmanuel", " Thomas Doherty", " Stephanie Corneliussen", " Alana Boden"],
+        "director": "Jessica M. Thompson",
+        "image": "img/the_invitation.jpg",
+        "releaseDate": "2022-8-26"
+    },{
+        "title": "Nope",
+        "actors": ["Daniel Kaluuya", "Keke Palmer", "Steven Yeun", "Michael Wincott"],
+        "director": "Jordan Peele",
+        "image": "img/nope.jpg",
+        "releaseDate": "2022-8-12"
+    },{
+        "title": "Avatar The Way Of Water",
+        "actors": ["Michelle Yeoh", "Zoe Saldana", "Kate Winslet", "Sigourney Weaver", "Sam Worthington"],
+        "director": "James Cameron",
+        "image": "img/avatar the way of water.jpg",
+        "releaseDate": "2022-12-16"
+    },{
+        "title": "Black Panther Wakanda Forever",
+        "actors": ["Letitia Wright", "Lupita Nyong'o", "Danai Gurira", "Winston Duke", "Florence Kasumba"],
+        "director": "Ryan Coogler",
+        "image": "img/black panther wakanda forever.jpg",
+        "releaseDate": "2022-11-11"
+    },{
+        "title": "Black Adam",
+        "actors": ["Dwayne 'The Rock' Johnson", "Sarah Shahi", "Mohammed Amer", "Viola Davis", "Pierce Brosnan"],
+        "director": "Jaume Collet-Serra",
+        "image": "img/black adam.jpg",
+        "releaseDate": "2022-10-21"
+    },{
+        "title": "Amsterdam",
+        "actors": ["Christian Bale", "Margot Robbie", "John David Washington", "Anya Taylor-Joy", "Robert De Niro"],
+        "director": "David O. Russell",
+        "image": "img/amsterdam.jpg",
+        "releaseDate": "2022-10-7"
+    }
+]

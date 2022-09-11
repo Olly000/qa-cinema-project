@@ -1,0 +1,104 @@
+[
+  {
+  "filmTitle": "Nope",
+  "showtime": "2022-09-12T19:00",
+  "screen": "Standard",
+  "ticketsAvailable": 200
+  },
+  {
+    "filmTitle": "Nope",
+    "showtime": "2022-09-13T18:00",
+    "screen": "Deluxe",
+    "ticketsAvailable": 40
+  },
+  {
+    "filmTitle": "The Invitation",
+    "showtime": "2022-09-13T17:00",
+    "screen": "Standard",
+    "ticketsAvailable": 200
+  },
+  {
+    "filmTitle": "The Invitation",
+    "showtime": "2022-09-12T17:00",
+    "screen": "Deluxe",
+    "ticketsAvailable": 40
+  },
+  {
+    "filmTitle": "Samaritan",
+    "showtime": "2022-09-12T13:00",
+    "screen": "Standard",
+    "ticketsAvailable": 200
+  },
+  {
+    "filmTitle": "Samaritan",
+    "showtime": "2022-09-12T14:00",
+    "screen": "Deluxe",
+    "ticketsAvailable": 40
+  },
+  {
+    "filmTitle": "Three Thousand Years of Longing",
+    "showtime": "2022-09-11T17:00",
+    "screen": "Standard",
+    "ticketsAvailable": 200
+  },
+  {
+    "filmTitle": "Three Thousand Years of Longing",
+    "showtime": "2022-09-13T14:00",
+    "screen": "Deluxe",
+    "ticketsAvailable": 40
+  },
+  {
+    "filmTitle": "Avatar The Way Of Water",
+    "showtime": "2022-09-12T11:00",
+    "screen": "Standard",
+    "ticketsAvailable": 200
+  },
+  {
+    "filmTitle": "Avatar The Way Of Water",
+    "showtime": "2022-09-14T18:00",
+    "screen": "Deluxe",
+    "ticketsAvailable": 40
+  },
+  {
+    "filmTitle": "Amsterdam",
+    "showtime": "2022-09-13T21:00",
+    "screen": "Standard",
+    "ticketsAvailable": 200
+  },
+  {
+    "filmTitle": "Amsterdam",
+    "showtime": "2022-09-13T20:00",
+    "screen": "Deluxe",
+    "ticketsAvailable": 40
+  },
+  {
+    "filmTitle": "Black Adam",
+    "showtime": "2022-09-14T13:00",
+    "screen": "Standard",
+    "ticketsAvailable": 200
+  },
+  {
+    "filmTitle": "Black Adam",
+    "showtime": "2022-09-14T15:00",
+    "screen": "Deluxe",
+    "ticketsAvailable": 40
+  },
+  {
+    "filmTitle": "Black Panther Wakanda Forever",
+    "showtime": "2022-09-11T17:00",
+    "screen": "Standard",
+    "ticketsAvailable": 200
+  },
+  {
+    "filmTitle": "Black Panther Wakanda Forever",
+    "showtime": "2022-09-13T14:00",
+    "screen": "Deluxe",
+    "ticketsAvailable": 40
+  },
+  {
+    "filmTitle": "",
+    "showtime": "2022-09-11T17:00",
+    "screen": "Standard",
+    "ticketsAvailable": 200
+  }
+]
